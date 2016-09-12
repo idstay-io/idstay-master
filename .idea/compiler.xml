@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="idstay-client_main" target="1.8" />
+      <module name="idstay-client_test" target="1.8" />
+      <module name="idstay-common_main" target="1.8" />
+      <module name="idstay-common_test" target="1.8" />
+      <module name="idstay-master_main" target="1.5" />
+      <module name="idstay-master_test" target="1.5" />
+      <module name="idstay-site_main" target="1.8" />
+      <module name="idstay-site_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

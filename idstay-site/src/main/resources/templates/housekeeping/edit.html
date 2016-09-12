@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="[[${sesson.locale}]]">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Makers Hotel </title>
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/makersapp.css}" />
+
+    <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="makersapp_edit">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">MAKERS HOTEL</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <!--.nav-collapse -->
+    </div>
+</nav>
+
+<form action="#" th:action="@{'/hotel/1/housekeeping/' + ${housekeeping.housekeepingId} + '/' + ${crew}}" th:object="${housekeeping}" method="post">
+    <div class="container">
+        <div class="col-xs-8">
+            <h1 style="margin-bottom:-10px;" th:text="*{room.roomName}">Room 301</h1>
+            <h5 class="text-uppercase" th:text="*{roomType.roomTypeName}">Modern Double</h5>
+            <p class="u_date"><span class="label label-updated">Updated</span><block th:text="' ' + ${housekeeping.lastUpdate}" /></p>
+        </div>
+        <div class="col-xs-4 text-right"><h2><button class="btn btn-default btn-sm" onclick="javascript:history.back()">Back to list</button></h2></div>
+        <div class="line"></div>
+        <div class="col-lg-12 clearfix">
+            <h4>Reservation Status</h4>
+            <div class="radio" th:each="rv : ${allReservationStatus}">
+                <label class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                    <input type="radio" name="reservationStatus" id="reservationStatus" th:text="#{${'reservationStatus.' + rv}}" th:field="*{reservationStatus}" th:value="${rv}" />
+                </label>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="col-lg-12 clearfix">
+            <h4>Room Status</h4>
+            <div class="radio" th:each="rs : ${allRoomStatus}">
+                <label class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                    <input type="radio" name="roomStatus" id="roomStatus" th:text="#{${'roomStatus.' + rs}}" th:field="*{roomStatus}" th:value="${rs}" />
+                </label>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="col-lg-12 clearfix">
+            <h4>Cleaning Status</h4>
+            <div class="radio" th:each="cs : ${allCleaningStatus}">
+                <label class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                    <input type="radio" name="cleaningStatus" id="cleaningStatus" th:text="#{${'cleaningStatus.' + cs}}" th:field="*{cleaningStatus}" th:value="${cs}" />
+                </label>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="col-lg-12 clearfix">
+            <h4>Housekeeping Remarks</h4>
+            <div class="checkbox" th:each="rk : ${allRemarks}">
+                <label class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                    <input type="checkbox" th:field="*{remarks}" th:value="${rk}" /><span class="badge" th:text="#{${'housekeepingRemarks.badge.'+ rk}}" />
+                    <th:block th:text="#{${'housekeepingRemarks.'+ rk}}" />
+                </label>
+            </div>
+        </div>
+        <div class="col-lg-12 clearfix" id="memo">
+            <textarea class="form-control" rows="3" placeholder="Memo" name="memo" th:text="${housekeeping.memo}"></textarea>
+        </div>
+        <div class="col-lg-12 clearfix">
+            <button type="submit" class="btn btn-default btn-lg btn-block">Update</button>
+        </div>
+    </div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-client/idstay-client.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-client/idstay-client.iml" group="idstay-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-client/idstay-client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-client/idstay-client_main.iml" group="idstay-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-client/idstay-client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-client/idstay-client_test.iml" group="idstay-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-common/idstay-common.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-common/idstay-common.iml" group="idstay-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-common/idstay-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-common/idstay-common_main.iml" group="idstay-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-common/idstay-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-common/idstay-common_test.iml" group="idstay-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-master.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-site/idstay-site.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-site/idstay-site.iml" group="idstay-site" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-site/idstay-site_main.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-site/idstay-site_main.iml" group="idstay-site" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/idstay-site/idstay-site_test.iml" filepath="$PROJECT_DIR$/.idea/modules/idstay-site/idstay-site_test.iml" group="idstay-site" />
+    </modules>
+  </component>
+</project>

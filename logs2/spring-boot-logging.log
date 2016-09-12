@@ -1,0 +1,591 @@
+2016-09-12 23:12:40.440  INFO 9836 --- [restartedMain] idstay.IdstayApplication                 : Starting IdstayApplication on DESKTOP-H7F2DCF with PID 9836 (C:\development\IdeaProjects\idstay-master\idstay-site\build\classes\main started by minsoo in C:\development\IdeaProjects\idstay-master)
+2016-09-12 23:12:40.464  INFO 9836 --- [restartedMain] idstay.IdstayApplication                 : No active profile set, falling back to default profiles: default
+2016-09-12 23:12:41.851  INFO 9836 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72259311: startup date [Mon Sep 12 23:12:41 KST 2016]; root of context hierarchy
+2016-09-12 23:12:52.623  INFO 9836 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6074b20f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-12 23:12:55.846  INFO 9836 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-09-12 23:12:55.909  INFO 9836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-12 23:12:55.940  INFO 9836 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-09-12 23:12:56.502  INFO 9836 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-12 23:12:56.518  INFO 9836 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 14682 ms
+2016-09-12 23:12:57.354  INFO 9836 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-12 23:12:57.370  INFO 9836 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2016-09-12 23:12:57.385  INFO 9836 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-12 23:12:57.401  INFO 9836 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-12 23:12:57.401  INFO 9836 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-12 23:12:57.401  INFO 9836 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-12 23:12:58.542  INFO 9836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-12 23:12:58.662  INFO 9836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-12 23:12:59.131  INFO 9836 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-12 23:12:59.131  INFO 9836 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-12 23:12:59.146  INFO 9836 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-12 23:12:59.427  INFO 9836 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-12 23:13:01.859  INFO 9836 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-12 23:13:04.331  INFO 9836 --- [restartedMain] o.h.tool.hbm2ddl.SchemaValidator         : HHH000229: Running schema validator
+2016-09-12 23:13:04.991  INFO 9836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-12 23:13:06.241  INFO 9836 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-09-12 23:13:09.274  INFO 9836 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72259311: startup date [Mon Sep 12 23:12:41 KST 2016]; root of context hierarchy
+2016-09-12 23:13:09.893  INFO 9836 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/housekeeping],methods=[GET]}" onto public java.lang.String idstay.fd.housekeeping.HousekeepingController.getHousekeeping()
+2016-09-12 23:13:09.918  INFO 9836 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hotel/{hotelId}/housekeepings/{crew}],methods=[GET]}" onto public java.lang.String idstay.fd.housekeeping.HousekeepingController.getHousekeepings(java.lang.Long,java.lang.String,org.springframework.ui.Model)
+2016-09-12 23:13:09.962  INFO 9836 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hotel/{hotelId}/housekeeping/{housekeepingId}/{crew}],methods=[GET]}" onto public java.lang.String idstay.fd.housekeeping.HousekeepingController.editHousekeeping(java.lang.Long,java.lang.Long,java.lang.String,org.springframework.ui.Model)
+2016-09-12 23:13:09.967  INFO 9836 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hotel/{hotelId}/housekeeping/{housekeepingId}/{crew}],methods=[POST]}" onto public java.lang.String idstay.fd.housekeeping.HousekeepingController.saveHousekeeping(java.lang.Long,java.lang.Long,idstay.fd.housekeeping.dto.HousekeepingDto,java.lang.String,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2016-09-12 23:13:09.987  INFO 9836 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hotel/{hotelId}/housekeepings/reset/@will],methods=[GET]}" onto public java.lang.String idstay.fp.housekeeping.HousekeepingManagement.resetHousekeeping()
+2016-09-12 23:13:09.998  INFO 9836 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-12 23:13:10.048  INFO 9836 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-12 23:13:10.311  INFO 9836 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-12 23:13:10.312  INFO 9836 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-12 23:13:10.600  INFO 9836 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-12 23:13:13.692  INFO 9836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-09-12 23:13:13.926  INFO 9836 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-12 23:13:14.239  INFO 9836 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-09-12 23:13:14.255  INFO 9836 --- [restartedMain] idstay.IdstayApplication                 : Started IdstayApplication in 36.648 seconds (JVM running for 42.677)
+2016-09-12 23:14:03.659  INFO 9836 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-12 23:14:03.671  INFO 9836 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-12 23:14:03.760  INFO 9836 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 78 ms
+2016-09-12 23:14:04.301  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:14:07.918  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:14:37.635  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:14:40.786  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:15:09.956  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:15:11.217  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:15:41.041  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:15:42.134  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:16:11.994  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:16:12.901  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:16:42.760  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:16:44.154  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:17:14.028  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:17:15.030  INFO 9836 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:17:44.885  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:17:45.813  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:18:15.669  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:18:17.110  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:18:46.927  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:18:47.815  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:19:17.685  INFO 9836 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:19:18.797  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:19:48.628  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:19:49.675  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:20:19.536  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:20:20.516  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:20:50.382  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:20:51.321  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:21:21.153  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:21:22.046  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:21:51.921  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:21:53.325  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:22:23.264  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:22:24.205  INFO 9836 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:22:54.054  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:22:54.932  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:23:24.814  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:23:25.702  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:23:55.554  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:23:56.459  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:24:26.321  INFO 9836 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:24:27.296  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:24:57.135  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:24:58.155  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:25:28.005  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:25:29.010  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:25:58.879  WARN 9836 --- [http-nio-8081-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1054, SQLState: 42S22
+2016-09-12 23:25:58.890 ERROR 9836 --- [http-nio-8081-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown column 'crew0_.crew_id' in 'field list'
+2016-09-12 23:25:58.963 ERROR 9836 --- [http-nio-8081-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'crew0_.crew_id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:942) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:70) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2117) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1900) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1876) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2617) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2600) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2429) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2424) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:501) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:371) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1326) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.QueryImpl.list(QueryImpl.java:87) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:114) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:78) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:102) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:92) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:280) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at com.sun.proxy.$Proxy98.findAllCrews(Unknown Source) ~[na:na]
+	at idstay.hotel.member.CrewService.getAllCrews(CrewService.java:26) ~[main/:na]
+	at idstay.fd.housekeeping.HousekeepingController.getAllCrews(HousekeepingController.java:151) ~[main/:na]
+	at sun.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.annotation.ModelFactory.invokeModelAttributeMethods(ModelFactory.java:139) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.annotation.ModelFactory.initModel(ModelFactory.java:109) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:805) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_101]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_101]
+
+2016-09-12 23:27:27.148  WARN 9836 --- [http-nio-8081-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1054, SQLState: 42S22
+2016-09-12 23:27:27.149 ERROR 9836 --- [http-nio-8081-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown column 'crew0_.crew_id' in 'field list'
+2016-09-12 23:27:27.175 ERROR 9836 --- [http-nio-8081-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'crew0_.crew_id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:942) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:70) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2117) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1900) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1876) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2617) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2600) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2429) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2424) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:501) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:371) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1326) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.QueryImpl.list(QueryImpl.java:87) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:114) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:78) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:102) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:92) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:280) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at com.sun.proxy.$Proxy98.findAllCrews(Unknown Source) ~[na:na]
+	at idstay.hotel.member.CrewService.getAllCrews(CrewService.java:26) ~[main/:na]
+	at idstay.fd.housekeeping.HousekeepingController.getAllCrews(HousekeepingController.java:151) ~[main/:na]
+	at sun.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.annotation.ModelFactory.invokeModelAttributeMethods(ModelFactory.java:139) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.annotation.ModelFactory.initModel(ModelFactory.java:109) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:805) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_101]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_101]
+
+2016-09-12 23:28:59.794  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:29:01.364  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:29:15.202  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:29:15.843  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:29:21.173  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:29:21.875  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:29:22.475  INFO 9836 --- [http-nio-8081-exec-10] i.f.housekeeping.HousekeepingController  : editHousekeeping: 202, @giny
+2016-09-12 23:29:22.984  INFO 9836 --- [http-nio-8081-exec-2] i.f.housekeeping.HousekeepingController  : editHousekeeping: 202, @giny
+2016-09-12 23:29:26.480  INFO 9836 --- [http-nio-8081-exec-5] i.f.housekeeping.HousekeepingController  : saveHousekeeping: HousekeepingDto[housekeepingId=202,RoomDto=<null>,CrewDto=CrewDto[id=0,crewName=@giny,locale=<null>],RoomTypeDto=<null>,ReservationStatus=Check_in,RoomStatus=Occupied,CleaningStatus=Inspected,Remarks=[],memo=test], @giny
+2016-09-12 23:29:26.541  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : housekeeping save: Housekeeping[id=202,room=Room[id=21,roomName=202,roomType=RoomType[id=3,roomTypeName=CLASSIC_TWIN]],roomType=RoomType[id=3,roomTypeName=CLASSIC_TWIN],hotelId=1,reservationStatus=Check_in,roomStatus=Occupied,cleaningStatus=Inspected,remarks=[],sortId=202,memo=test,lastUpdate=2016-09-12 13:04:51.0], Crew[id=30,crewName=@giny,locale=en_US,activate=true]
+2016-09-12 23:29:26.578  INFO 9836 --- [http-nio-8081-exec-5] i.f.h.HousekeepingHistoryService         : housekeepingHistory save: idstay.fd.housekeeping.HousekeepingHistory@5b78c527, {}
+2016-09-12 23:29:26.822  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:29:27.338  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:29:57.120  WARN 9836 --- [http-nio-8081-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1054, SQLState: 42S22
+2016-09-12 23:29:57.133 ERROR 9836 --- [http-nio-8081-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown column 'crew0_.crew_id' in 'field list'
+2016-09-12 23:29:57.157 ERROR 9836 --- [http-nio-8081-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'crew0_.crew_id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_101]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_101]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:942) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962) ~[mysql-connector-java-5.1.39.jar:5.1.39]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:70) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2117) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1900) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1876) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2617) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2600) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2429) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2424) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:501) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:371) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1326) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.internal.QueryImpl.list(QueryImpl.java:87) ~[hibernate-core-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483) ~[hibernate-entitymanager-5.0.9.Final.jar:5.0.9.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:114) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:78) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:102) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:92) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61) ~[spring-data-commons-1.12.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:280) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133) ~[spring-data-jpa-1.10.2.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213) ~[spring-aop-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at com.sun.proxy.$Proxy98.findAllCrews(Unknown Source) ~[na:na]
+	at idstay.hotel.member.CrewService.getAllCrews(CrewService.java:26) ~[main/:na]
+	at idstay.fd.housekeeping.HousekeepingController.getAllCrews(HousekeepingController.java:151) ~[main/:na]
+	at sun.reflect.GeneratedMethodAccessor58.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.annotation.ModelFactory.invokeModelAttributeMethods(ModelFactory.java:139) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.method.annotation.ModelFactory.initModel(ModelFactory.java:109) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:805) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_101]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_101]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.4.jar:8.5.4]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_101]
+
+2016-09-12 23:30:35.311  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:30:35.985  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:30:36.938  INFO 9836 --- [http-nio-8081-exec-4] i.f.housekeeping.HousekeepingController  : editHousekeeping: 202, @giny
+2016-09-12 23:30:37.162  INFO 9836 --- [http-nio-8081-exec-5] i.f.housekeeping.HousekeepingController  : editHousekeeping: 202, @giny
+2016-09-12 23:30:43.331  INFO 9836 --- [http-nio-8081-exec-7] i.f.housekeeping.HousekeepingController  : saveHousekeeping: HousekeepingDto[housekeepingId=202,RoomDto=<null>,CrewDto=CrewDto[id=0,crewName=@giny,locale=<null>],RoomTypeDto=<null>,ReservationStatus=Check_in,RoomStatus=Occupied,CleaningStatus=Inspected,Remarks=[],memo=test -@min], @giny
+2016-09-12 23:30:43.357  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : housekeeping save: Housekeeping[id=202,room=Room[id=21,roomName=202,roomType=RoomType[id=3,roomTypeName=CLASSIC_TWIN]],roomType=RoomType[id=3,roomTypeName=CLASSIC_TWIN],hotelId=1,reservationStatus=Check_in,roomStatus=Occupied,cleaningStatus=Inspected,remarks=[],sortId=202,memo=test -@min,lastUpdate=2016-09-12 23:29:27.0], Crew[id=30,crewName=@giny,locale=en_US,activate=true]
+2016-09-12 23:30:43.358  INFO 9836 --- [http-nio-8081-exec-7] i.f.h.HousekeepingHistoryService         : housekeepingHistory save: idstay.fd.housekeeping.HousekeepingHistory@790b58ee, {}
+2016-09-12 23:30:43.414  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:30:43.966  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:30:46.750  INFO 9836 --- [http-nio-8081-exec-2] i.f.housekeeping.HousekeepingController  : editHousekeeping: 202, @giny
+2016-09-12 23:30:47.067  INFO 9836 --- [http-nio-8081-exec-7] i.f.housekeeping.HousekeepingController  : editHousekeeping: 202, @giny
+2016-09-12 23:37:41.300  INFO 9836 --- [http-nio-8081-exec-8] i.f.housekeeping.HousekeepingController  : saveHousekeeping: HousekeepingDto[housekeepingId=202,RoomDto=<null>,CrewDto=CrewDto[id=0,crewName=@giny,locale=<null>],RoomTypeDto=<null>,ReservationStatus=Check_out,RoomStatus=Occupied,CleaningStatus=Inspected,Remarks=[],memo=test -@min], @giny
+2016-09-12 23:37:41.331  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : housekeeping save: Housekeeping[id=202,room=Room[id=21,roomName=202,roomType=RoomType[id=3,roomTypeName=CLASSIC_TWIN]],roomType=RoomType[id=3,roomTypeName=CLASSIC_TWIN],hotelId=1,reservationStatus=Check_out,roomStatus=Occupied,cleaningStatus=Inspected,remarks=[],sortId=202,memo=test -@min,lastUpdate=2016-09-12 23:30:43.0], Crew[id=30,crewName=@giny,locale=en_US,activate=true]
+2016-09-12 23:37:41.344  INFO 9836 --- [http-nio-8081-exec-8] i.f.h.HousekeepingHistoryService         : housekeepingHistory save: idstay.fd.housekeeping.HousekeepingHistory@5c97fff7, {}
+2016-09-12 23:37:41.383  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:37:42.068  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:37:43.615  INFO 9836 --- [http-nio-8081-exec-10] i.f.housekeeping.HousekeepingController  : editHousekeeping: 203, @giny
+2016-09-12 23:37:43.857  INFO 9836 --- [http-nio-8081-exec-2] i.f.housekeeping.HousekeepingController  : editHousekeeping: 203, @giny
+2016-09-12 23:37:54.504  INFO 9836 --- [http-nio-8081-exec-5] i.f.housekeeping.HousekeepingController  : saveHousekeeping: HousekeepingDto[housekeepingId=203,RoomDto=<null>,CrewDto=CrewDto[id=0,crewName=@giny,locale=<null>],RoomTypeDto=<null>,ReservationStatus=Stay,RoomStatus=Away,CleaningStatus=Inspected,Remarks=[Bad_smell, Air_cleaner, Window_open, Topper, Pillow, Blanket, Double_bed],memo=], @giny
+2016-09-12 23:37:54.529  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : housekeeping save: Housekeeping[id=203,room=Room[id=11,roomName=203,roomType=RoomType[id=2,roomTypeName=SEMI_DOUBLE]],roomType=RoomType[id=2,roomTypeName=SEMI_DOUBLE],hotelId=1,reservationStatus=Stay,roomStatus=Away,cleaningStatus=Inspected,remarks=[Bad_smell, Air_cleaner, Window_open, Topper, Pillow, Blanket, Double_bed],sortId=203,memo=,lastUpdate=2016-09-12 06:54:29.0], Crew[id=30,crewName=@giny,locale=en_US,activate=true]
+2016-09-12 23:37:54.541  INFO 9836 --- [http-nio-8081-exec-5] i.f.h.HousekeepingHistoryService         : housekeepingHistory save: idstay.fd.housekeeping.HousekeepingHistory@56192593, {}
+2016-09-12 23:37:54.597  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:37:55.250  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:37:57.376  INFO 9836 --- [http-nio-8081-exec-9] i.f.housekeeping.HousekeepingController  : editHousekeeping: 202, @giny
+2016-09-12 23:37:57.590  INFO 9836 --- [http-nio-8081-exec-1] i.f.housekeeping.HousekeepingController  : editHousekeeping: 202, @giny
+2016-09-12 23:38:11.542  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:38:12.301  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:38:13.204  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:38:59.422  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:00.178  INFO 9836 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:01.169  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:01.864  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:03.502  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:04.053  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:09.035  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:09.635  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:10.291  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:10.875  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:11.963  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:12.714  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:13.203  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:14.002  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:14.941  INFO 9836 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:15.657  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:45.342  INFO 9836 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:39:47.035  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:40:16.927  INFO 9836 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:40:20.337  INFO 9836 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:40:49.907  INFO 9836 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:40:51.351  INFO 9836 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:41:21.114  INFO 9836 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:41:22.240  INFO 9836 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:41:52.011  INFO 9836 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:41:53.405  INFO 9836 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:42:25.338  INFO 9648 --- [restartedMain] idstay.IdstayApplication                 : Starting IdstayApplication on DESKTOP-H7F2DCF with PID 9648 (C:\development\IdeaProjects\idstay-master\idstay-site\build\classes\main started by minsoo in C:\development\IdeaProjects\idstay-master)
+2016-09-12 23:42:25.354  INFO 9648 --- [restartedMain] idstay.IdstayApplication                 : No active profile set, falling back to default profiles: default
+2016-09-12 23:42:27.585  INFO 9648 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15d8ff68: startup date [Mon Sep 12 23:42:27 KST 2016]; root of context hierarchy
+2016-09-12 23:42:38.522  INFO 9648 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8eeb0801] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-12 23:42:42.280  INFO 9648 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2016-09-12 23:42:42.358  INFO 9648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-09-12 23:42:42.389  INFO 9648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-09-12 23:42:42.967  INFO 9648 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-09-12 23:42:42.983  INFO 9648 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 15410 ms
+2016-09-12 23:42:44.140  INFO 9648 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-12 23:42:44.183  INFO 9648 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2016-09-12 23:42:44.207  INFO 9648 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-12 23:42:44.232  INFO 9648 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-12 23:42:44.240  INFO 9648 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-12 23:42:44.256  INFO 9648 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-12 23:42:45.728  INFO 9648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-12 23:42:45.845  INFO 9648 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-12 23:42:46.319  INFO 9648 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-12 23:42:46.326  INFO 9648 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-09-12 23:42:46.334  INFO 9648 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-09-12 23:42:46.583  INFO 9648 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-12 23:42:48.736  INFO 9648 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-09-12 23:42:51.803  INFO 9648 --- [restartedMain] o.h.tool.hbm2ddl.SchemaValidator         : HHH000229: Running schema validator
+2016-09-12 23:42:52.662  INFO 9648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-12 23:42:54.033  INFO 9648 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2016-09-12 23:42:57.141  INFO 9648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15d8ff68: startup date [Mon Sep 12 23:42:27 KST 2016]; root of context hierarchy
+2016-09-12 23:42:57.605  INFO 9648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hotel/{hotelId}/housekeeping/{housekeepingId}/{crew}],methods=[POST]}" onto public java.lang.String idstay.fd.housekeeping.HousekeepingController.saveHousekeeping(java.lang.Long,java.lang.Long,idstay.fd.housekeeping.dto.HousekeepingDto,java.lang.String,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2016-09-12 23:42:57.652  INFO 9648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/housekeeping],methods=[GET]}" onto public java.lang.String idstay.fd.housekeeping.HousekeepingController.getHousekeeping()
+2016-09-12 23:42:57.668  INFO 9648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hotel/{hotelId}/housekeepings/{crew}],methods=[GET]}" onto public java.lang.String idstay.fd.housekeeping.HousekeepingController.getHousekeepings(java.lang.Long,java.lang.String,org.springframework.ui.Model)
+2016-09-12 23:42:57.668  INFO 9648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hotel/{hotelId}/housekeeping/{housekeepingId}/{crew}],methods=[GET]}" onto public java.lang.String idstay.fd.housekeeping.HousekeepingController.editHousekeeping(java.lang.Long,java.lang.Long,java.lang.String,org.springframework.ui.Model)
+2016-09-12 23:42:57.715  INFO 9648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hotel/{hotelId}/housekeepings/reset/@will],methods=[GET]}" onto public java.lang.String idstay.fp.housekeeping.HousekeepingManagement.resetHousekeeping()
+2016-09-12 23:42:57.730  INFO 9648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-12 23:42:57.746  INFO 9648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-12 23:42:58.032  INFO 9648 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-12 23:42:58.032  INFO 9648 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-12 23:42:58.298  INFO 9648 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-12 23:43:01.769  INFO 9648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-09-12 23:43:02.082  INFO 9648 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-09-12 23:43:02.410  INFO 9648 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2016-09-12 23:43:02.441  INFO 9648 --- [restartedMain] idstay.IdstayApplication                 : Started IdstayApplication in 40.793 seconds (JVM running for 43.135)
+2016-09-12 23:43:10.816  INFO 9648 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-12 23:43:10.829  INFO 9648 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-12 23:43:10.920  INFO 9648 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 77 ms
+2016-09-12 23:43:11.316  INFO 9648 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:43:14.180  INFO 9648 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:43:15.319  INFO 9648 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:43:16.774  INFO 9648 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:43:46.205  INFO 9648 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:43:47.615  INFO 9648 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:44:17.423  INFO 9648 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:44:19.485  INFO 9648 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:44:20.358  INFO 9648 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:44:21.277  INFO 9648 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:44:49.311  INFO 9648 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:44:50.418  INFO 9648 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:44:50.895  INFO 9648 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:44:51.898  INFO 9648 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:45:20.235  INFO 9648 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:45:21.726  INFO 9648 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:45:21.973  INFO 9648 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:45:22.958  INFO 9648 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:45:51.728  INFO 9648 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:45:52.787  INFO 9648 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:45:52.913  INFO 9648 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:45:54.073  INFO 9648 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:46:22.730  INFO 9648 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:46:23.960  INFO 9648 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:46:24.588  INFO 9648 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:46:25.485  INFO 9648 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:46:54.138  INFO 9648 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:46:55.260  INFO 9648 --- [http-nio-8081-exec-2] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:46:55.351  INFO 9648 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:46:56.340  INFO 9648 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:47:25.033  INFO 9648 --- [http-nio-8081-exec-5] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:47:26.117  INFO 9648 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:47:26.568  INFO 9648 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:47:27.245  INFO 9648 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:47:56.317  INFO 9648 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:47:57.051  INFO 9648 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:47:57.271  INFO 9648 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:47:58.018  INFO 9648 --- [http-nio-8081-exec-7] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:48:27.070  INFO 9648 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:48:27.912  INFO 9648 --- [http-nio-8081-exec-8] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:48:28.173  INFO 9648 --- [http-nio-8081-exec-4] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:48:29.121  INFO 9648 --- [http-nio-8081-exec-3] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:48:57.947  INFO 9648 --- [http-nio-8081-exec-10] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:48:58.927  INFO 9648 --- [http-nio-8081-exec-6] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:48:59.774  INFO 9648 --- [http-nio-8081-exec-9] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1
+2016-09-12 23:49:00.191  INFO 9648 --- [http-nio-8081-exec-1] i.fd.housekeeping.HousekeepingService    : findByHotelId: 1

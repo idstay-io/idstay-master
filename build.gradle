@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        ext.springRepo = 'http://repo.spring.io/libs-release'
+        mavenLocal()
+        maven { url springRepo }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+        classpath 'io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE'
+    }
+}
+
+def jdkVersion = '1.8'
+def javaProjects = [ project(':idstay-site'), project(':idstay-common') ]
+def bootProjects = project(':idstay-site')
+
+configure(allprojects) {
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+}
+
+configure(javaProjects) {
+    apply plugin: 'java'
+    apply plugin: "io.spring.dependency-management"
+
+    sourceCompatibility = jdkVersion
+    targetCompatibility = jdkVersion
+
+    repositories {
+        ext.springRepo = 'http://repo.spring.io/libs-release'
+        maven { url springRepo }
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.slf4j:slf4j-api'
+        compile 'org.apache.commons:commons-lang3:3.0'
+        testCompile 'junit:junit'
+        testCompile 'org.hamcrest:hamcrest-library'
+        testCompile 'org.mockito:mockito-core'
+
+    }
+
+    configurations {
+        // replaced with jcl-over-slf4j
+        all*.exclude group: 'commons-logging', module: 'commons-logging'
+        // replaced with log4j-over-slf4j
+        all*.exclude group: 'log4j', module: 'log4j'
+    }
+
+    eclipseClasspath.dependsOn testClasses
+}
+
+
+configure(bootProjects) {
+    apply plugin: 'spring-boot'
+}

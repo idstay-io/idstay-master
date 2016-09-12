@@ -1,0 +1,5 @@
+rootProject.name = 'idstay-master'
+
+include 'idstay-common'
+include 'idstay-site'
+include 'idstay-client'

@@ -1,0 +1,248 @@
+.col-xs-five,
+.col-sm-five,
+.col-md-five,
+.col-lg-five {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.makersapp_list div[class^="col-"] {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.col-xs-five {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-five {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-five {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-five {
+        width: 20%;
+        float: left;
+    }
+}
+/*Bootstrap Override End*/
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.room_unit {
+    border-radius: 5px;
+    /*margin:8px;*/
+    position: relative;
+    padding: 8px;
+    font-size: 10px;
+    height: 96px;
+    margin-bottom: 8px;
+}
+/*룸 상태 표시 1~5 단계, 1:Dirty - 5:Ready for Sale, 0은 N/A */
+
+.status_NA {
+    background: #555555;
+}
+
+.status_NA span.label::after {
+    content: "N/A";
+}
+
+.status_Dirty {
+    background: #9fa3a7;
+}
+
+.status_Dirty span.label::after {
+    content: "Dirty";
+}
+
+.status_Request_for_cleaning {
+    background: #ed536a;
+}
+
+.status_Request_for_cleaning span.label::after {
+    content: "Request";
+}
+
+.status_Under_cleaning {
+    background: #ffc593;
+}
+
+.status_Under_cleaning span.label::after {
+    content: "Cleaning";
+}
+
+.status_Clean {
+    background: #2ea868;
+}
+
+.status_Clean span.label::after {
+    content: "Cleaned";
+}
+
+.status_Inspected {
+    background: #86d4d6;
+}
+
+.status_Inspected span.label::after {
+    content: "Inspected";
+}
+
+.status_Ready_for_sale {
+    background: #00aad0;
+}
+
+.status_Ready_for_sale span.label::after {
+    content: "Ready";
+}
+
+.room_header {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.room_header .num {
+    display: inline-block;
+    font-size: 2.4em;
+    font-weight: 500;
+    color: #FFFFFF;
+    float: left;
+    margin-top: -0.4em;
+    padding-right: 4px;
+    /*vertical-align: middle;*/
+}
+
+.room_header .type {
+    font-size: 0.9em;
+    color: #FFFFFF;
+    line-height: 0.9em;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: solid 1px #FFFFFF;
+    padding-left: 4px;
+}
+
+.room_unit .memo {
+    position: absolute;
+    right: 8px;
+    bottom: 3px;
+    font-size: 1.6em;
+    color: #FFF;
+}
+
+.room_status {
+    font-size: 1.8em;
+    font-weight: 500;
+    line-height: 0.9;
+}
+
+.rsv_status {
+    font-size: 1.8em;
+    font-weight: 500;
+    line-height: 0.9;
+}
+
+.room_check {
+    position: absolute;
+    bottom: 5px;
+}
+
+.c_status {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    font-size: 1.4em;
+}
+
+.label-default {
+    background-color: #fff;
+}
+
+.info .badge {
+    font-size: 9px;
+}
+
+.info {
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.icon {
+    width: 120px;
+    float: left;
+    margin-bottom: 4px;
+}
+
+.icon .glyphicon {
+    color: #777;
+}
+
+.floor {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.spacer {
+    height: 24px;
+}
+
+.user_section {
+    margin-bottom: 20px;
+}
+
+.floor_divider {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    clear: both;
+    width: 100%;
+}
+
+#memo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.u_date {
+    font-size: 0.8em;
+    margin-top: -8px;
+}
+
+.u_date span.label-updated {
+    background-color: #ccc;
+}
+
+div.line {
+    height: 30px;
+    width: 30px;
+    border-bottom: 4px solid #333;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    clear: both;
+}
