@@ -1,4 +1,6 @@
 # Created by https://www.gitignore.io/api/windows,linux,intellij,java,git,gradle
+### spring ###
+*.log
 
 ### Windows ###
 # Windows image file caches
@@ -91,10 +93,17 @@ fabric.properties
 
 ### Git ###
 *.orig
+.git
 
 
 ### Java ###
+target
+build
+bin
+
 *.class
+*.back
+
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
