@@ -5,7 +5,7 @@ springBoot {
 
 jar {
     baseName = 'idstay-site'
-    version = '0.2.2-TEST'
+    version = '0.2.2-SNAPSHOT'
 }
 
 dependencies {

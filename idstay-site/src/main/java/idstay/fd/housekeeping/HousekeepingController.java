@@ -1,5 +1,6 @@
 package idstay.fd.housekeeping;
 
+import idstay.common.util.DateTimeUtil;
 import idstay.fd.housekeeping.dto.HousekeepingDto;
 import idstay.fd.housekeeping.common.CleaningStatus;
 import idstay.fd.housekeeping.common.Remarks;
@@ -149,6 +150,11 @@ public class HousekeepingController {
     @ModelAttribute("allCrews")
     public List<CrewDto> getAllCrews() {
         return  CrewDto.dtoList(crewService.getAllCrews());
+    }
+
+    @ModelAttribute("curDate")
+    public String getCurrentDate() {
+        return  DateTimeUtil.getLocalDateString();
     }
 
     @Autowired

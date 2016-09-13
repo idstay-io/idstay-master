@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io/api/windows,linux,intellij,java,git,gradle
 ### spring ###
+logs
+logs2
 *.log
 
 ### Windows ###
