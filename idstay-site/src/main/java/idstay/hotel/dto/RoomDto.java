@@ -1,9 +1,8 @@
 package idstay.hotel.dto;
 
+import idstay.hotel.Room;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-
-import idstay.hotel.Room;
 
 public class RoomDto {
     private long roomId;

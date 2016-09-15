@@ -1,6 +1,5 @@
 package idstay.fd.guest;
 
-import idstay.customer.Customer;
 import idstay.customer.CustomerService;
 import idstay.fd.guest.support.HotelGuestRepository;
 import org.springframework.beans.factory.annotation.Autowired;

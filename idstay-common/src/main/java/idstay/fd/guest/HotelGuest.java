@@ -1,7 +1,7 @@
 package idstay.fd.guest;
 
 
-import idstay.hotel.Hotel;
+import idstay.customer.Customer;
 
 import javax.persistence.*;
 

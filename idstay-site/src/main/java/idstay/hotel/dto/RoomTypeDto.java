@@ -1,9 +1,8 @@
 package idstay.hotel.dto;
 
+import idstay.hotel.RoomType;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-
-import idstay.hotel.RoomType;
 
 public class RoomTypeDto {
     private String roomTypeName;

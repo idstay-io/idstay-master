@@ -1,12 +1,8 @@
 package idstay.hotel;
 
+import idstay.hotel.support.HotelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import idstay.hotel.support.HotelRepository;
-
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.Errors;
 
 @Service
 public class HotelService {

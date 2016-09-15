@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 public class Customer {
-    @Ids
+    @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name="customer_id")
     private long id;

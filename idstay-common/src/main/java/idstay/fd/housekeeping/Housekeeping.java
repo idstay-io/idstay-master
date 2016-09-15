@@ -1,20 +1,20 @@
 package idstay.fd.housekeeping;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.*;
-
-
-import idstay.fd.housekeeping.common.*;
+import idstay.fd.housekeeping.common.CleaningStatus;
+import idstay.fd.housekeeping.common.Remarks;
+import idstay.fd.housekeeping.common.ReservationStatus;
+import idstay.fd.housekeeping.common.RoomStatus;
+import idstay.hotel.Room;
+import idstay.hotel.RoomType;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import idstay.hotel.Room;
-import idstay.hotel.RoomType;
+import javax.persistence.*;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 
 

@@ -1,19 +1,11 @@
 package idstay.fd.housekeeping;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
 import idstay.fd.housekeeping.common.Remarks;
 import idstay.hotel.member.Crew;
+
+import javax.persistence.*;
+import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class HousekeepingHistory {
