@@ -1,12 +1,10 @@
 package idstay.fd.housekeeping.support;
 
-import java.util.List;
-
+import idstay.fd.housekeeping.Housekeeping;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import idstay.fd.housekeeping.Housekeeping;
-import idstay.hotel.Hotel;
+import java.util.List;
 
 public interface HousekeepingRepository extends CrudRepository<Housekeeping, Long>{
 

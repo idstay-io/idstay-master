@@ -1,10 +1,8 @@
 package idstay.fd.housekeeping.support;
 
+import idstay.fd.housekeeping.HousekeepingHistory;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-
-
-import idstay.fd.housekeeping.HousekeepingHistory;
 
 import java.util.Date;
 import java.util.List;
