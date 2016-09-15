@@ -1,6 +1,6 @@
 package idstay.fd.stay;
 
-import idstay.hotel.Room;
+import idstay.configuration.hotel.Room;
 import org.junit.Before;
 import org.junit.Test;
 

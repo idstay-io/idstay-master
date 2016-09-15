@@ -283,3 +283,5 @@ set reservation_status = 'NA',
     room_status = 'Vacant',
     cleaning_status = 'NA'
 where housekeeping_id > -1;
+
+

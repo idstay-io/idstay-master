@@ -1,6 +1,7 @@
 package idstay.common.util;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -20,5 +21,10 @@ public class DateTimeUtil {
     public static String getLocalDateString() {
         DateFormat df = new SimpleDateFormat("yyyy.MM.dd");
         return df.format(getLocalDate());
+    }
+
+    public static Date parseDate(String dateString) throws ParseException {
+        SimpleDateFormat conv = new SimpleDateFormat("yyyy.MM.dd");
+        return conv.parse(dateString);
     }
 }
