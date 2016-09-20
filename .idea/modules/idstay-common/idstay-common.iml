@@ -3,6 +3,8 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../idstay-common">
+      <sourceFolder url="file://$MODULE_DIR$/../../../idstay-common/src/test-util/java/idstay" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../idstay-common/src/test-util/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../idstay-common/src/test-util" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../idstay-common/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../idstay-common/build" />
