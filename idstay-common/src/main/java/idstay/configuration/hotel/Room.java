@@ -10,7 +10,7 @@ public class Room {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="room_id")
-    private long id;
+    private Long id;
     private String roomName;
     private int floor;
     private int sortId = 0;
@@ -18,17 +18,20 @@ public class Room {
     @ManyToOne
     @JoinColumn(name="room_type_id", nullable = false)
     private RoomType roomType;
-    private long hotelId;
+    private Long hotelId;
 
     protected Room() {}
-    public Room(final long id) {
-        this.id = id;
-    }
-    public Room(final String roomName, final int floor, final int sortId, final RoomType roomType) {
+    public Room(final String roomName, final RoomType roomType) {
         this.roomName = roomName;
+        this.roomType = roomType;
+    }
+
+    /* For testing only */
+    public Room(final Long id, final String roomName, final int floor, final int sortId, final RoomType roomType) {
+        this(roomName, roomType);
+        this.id = id;
         this.floor = floor;
         this.sortId = sortId;
-        this.roomType = roomType;
         this.hotelId = roomType.getHotel().getId();
     }
 
@@ -68,7 +71,7 @@ public class Room {
     }
 
     public int hashCode() {
-        return (int) id;
+        return id.intValue();
     }
 
     @Override

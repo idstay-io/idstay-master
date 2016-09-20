@@ -1,10 +1,10 @@
 package idstay.frontdesk.booking;
 
 import idstay.configuration.hotel.Room;
-import idstay.frontdesk.common.BookingChannel;
 import idstay.profiles.hotelguest.HotelGuest;
 import org.apache.commons.lang3.Validate;
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Booking {
@@ -12,7 +12,7 @@ public class Booking {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name="booking_id")
-    private long id;
+    private Long id;
 
     @Embedded
     private StayInformation stayInformation;
@@ -25,10 +25,15 @@ public class Booking {
     @JoinColumn(name="room_id", nullable = false)
     private Room room;
 
+    @OneToMany(fetch=FetchType.LAZY, mappedBy = "booking")
+    private Collection<RoomOccupancy> roomOccupancies;
+
     @Embedded
     private BookingChannelInformation bookingChannelInformation;
 
     protected Booking() {}
+
+    /* only for unit test */
     public Booking(final Room room, final StayInformation stayInformation, final HotelGuest hotelGuest, final BookingChannelInformation bookingChannelInformation) {
         Validate.notNull(room, "Room is required");
         Validate.notNull(stayInformation, "Stay Information is required");
@@ -40,6 +45,15 @@ public class Booking {
         this.hotelGuest = hotelGuest;
         this.bookingChannelInformation = bookingChannelInformation;
     }
+
+    /* only for unit test */
+    public Booking(final Long id, final Room room, final StayInformation stayInformation, final HotelGuest hotelGuest, final BookingChannelInformation bookingChannelInformation) {
+        this(room, stayInformation, hotelGuest, bookingChannelInformation);
+        this.id = id;
+    }
+
+
+
 
     public Long getId() {
         return id;

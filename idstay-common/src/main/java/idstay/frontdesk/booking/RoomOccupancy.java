@@ -22,15 +22,19 @@ public class RoomOccupancy {
     @Temporal(TemporalType.DATE)
     private Date toDate;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="hotel_guest_id")
     private HotelGuest hotelGuest;
 
     @ManyToOne
+    @JoinColumn(name="booking_id")
     private Booking booking;
 
     protected RoomOccupancy() {}
     public RoomOccupancy(final Room room, final Date fromDate, final Date toDate) {
-
+        this.room = room;
+        this.fromDate = fromDate;
+        this.toDate = toDate;
     }
 
     public long getId() {

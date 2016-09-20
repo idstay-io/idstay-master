@@ -10,7 +10,7 @@ public class Hotel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "hotel_id")
-    private long id;
+    private Long id;
     private String hotelName;
 
     protected Hotel() {
@@ -19,8 +19,11 @@ public class Hotel {
     public Hotel(final long id) {
         this.id = id;
     }
-
-    public Hotel(String hotelName) {
+    public Hotel(final String hotelName) {
+        this.hotelName = hotelName;
+    }
+    public Hotel(final Long id , final String hotelName) {
+        this.id = id;
         this.hotelName = hotelName;
     }
 
@@ -45,7 +48,7 @@ public class Hotel {
     }
 
     public int hashCode() {
-        return (int) id;
+        return id.hashCode();
     }
 
 

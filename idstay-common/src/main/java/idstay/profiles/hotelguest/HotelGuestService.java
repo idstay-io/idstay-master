@@ -12,7 +12,7 @@ public class HotelGuestService {
     private CustomerService customerService;
     private HotelGuestRepository hotelGuestRepository;
 
-    public HotelGuest findOrCreateHotelGuest(HotelGuest hotelGuest) {
+    public HotelGuest getBookingGuest(HotelGuest hotelGuest) {
         if (hotelGuest.identifiable()) {
             Optional<HotelGuest> guest = findByEmail(hotelGuest.getEmail());
             if(guest.isPresent()) return guest.get();
@@ -38,4 +38,6 @@ public class HotelGuestService {
     public void setHotelGuestRepository(HotelGuestRepository hotelGuestRepository) {
         this.hotelGuestRepository = hotelGuestRepository;
     }
+
+
 }

@@ -10,7 +10,7 @@ public class HotelGuest {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name="hotel_guest_id")
-    private long id;
+    private Long id;
 
     private String firstName;
     private String lastName;
@@ -22,6 +22,7 @@ public class HotelGuest {
         this.guestName = guestName;
     }
 
+    /* for unit test only */
     public Long getId() {
         return id;
     }
@@ -41,6 +42,15 @@ public class HotelGuest {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
 
     public boolean identifiable() {
         return (email != null)? true : false;

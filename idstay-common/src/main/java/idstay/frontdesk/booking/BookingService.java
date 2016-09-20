@@ -9,22 +9,23 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookingService {
     private BookingRepository bookingRepository;
 
     @Transactional
-    public Booking makeReservation(Booking booking) throws InValidBookingException {
+    public Optional<Booking> makeReservation(Booking booking) throws InValidBookingException {
         if (!validStay(booking.getRoom(), booking.getStayInformation().getStayPeriod())) {
             throw new InValidBookingException();
         }
-        return saveBooking(booking);
+        return Optional.of(saveBooking(booking));
     }
 
     private boolean validStay(final Room room, final StayPeriod stayPeriod) {
         List<Booking> bookingList = bookingRepository.findByRoom(room);
-        return bookingList.isEmpty() ? true : false;
+        return bookingList.isEmpty();
     }
 
     private Booking saveBooking(Booking booking) {

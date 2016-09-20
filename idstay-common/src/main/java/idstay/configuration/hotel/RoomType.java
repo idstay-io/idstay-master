@@ -19,13 +19,17 @@ public class RoomType {
     private Hotel hotel;
 
     protected RoomType() {}
-    public RoomType(final long id) {
-        this.id = id;
-    }
-    public RoomType(String roomTypeName, int sortId, Hotel hotel) {
+    public RoomType(String roomTypeName, Hotel hotel) {
         this.roomTypeName = roomTypeName;
         this.sortId = sortId;
         this.hotel = hotel;
+    }
+
+    /* For testing only */
+    public RoomType(Long id, String roomTypeName, int sortId, Hotel hotel) {
+        this(roomTypeName, hotel);
+        this.id = id;
+        this.sortId = sortId;
     }
 
     public long getId() {
@@ -34,6 +38,10 @@ public class RoomType {
 
     public String getRoomTypeName() {
         return roomTypeName;
+    }
+
+    public void setSortId(int sortId) {
+        this.sortId = sortId;
     }
 
     public int getSortId() {
