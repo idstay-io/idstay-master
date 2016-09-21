@@ -1,0 +1,33 @@
+project:
+  artifactId: idstay-io
+  name: idstay-io
+  description: idstay-io
+
+spring:
+  main:
+    sources: idstay.IdstaySite
+  thymeleaf:
+    mode: LEGACYHTML5
+  jpa:
+    show_sql: false
+    hibernate:
+      naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
+      ddl_auto: none
+
+---
+
+spring:
+  profiles: production
+#security:
+#  require_ssl: true
+server:
+  port: 8081
+
+---
+
+  spring:
+    profiles: staging,standalone
+  #security:
+  #  require_ssl: true
+  server:
+    port: 8082
