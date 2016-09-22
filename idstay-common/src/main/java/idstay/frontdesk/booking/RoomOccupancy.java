@@ -12,9 +12,10 @@ public class RoomOccupancy {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name="room_occupancy_id")
-    private long id;
+    private Long id;
 
     @ManyToOne
+    @JoinColumn(name="room_id")
     private Room room;
 
     @Temporal(TemporalType.DATE)
@@ -26,15 +27,21 @@ public class RoomOccupancy {
     @JoinColumn(name="hotel_guest_id")
     private HotelGuest hotelGuest;
 
-    @ManyToOne
-    @JoinColumn(name="booking_id")
-    private Booking booking;
+//    @ManyToOne
+//    @JoinColumn(name="booking_id")
+//    private Booking booking;
 
     protected RoomOccupancy() {}
     public RoomOccupancy(final Room room, final Date fromDate, final Date toDate) {
         this.room = room;
         this.fromDate = fromDate;
         this.toDate = toDate;
+    }
+
+    /* for Junit only */
+    public RoomOccupancy(Long id, final Room room, final Date fromDate, final Date toDate) {
+        this(room, fromDate, toDate);
+        this.id = id;
     }
 
     public long getId() {
@@ -57,9 +64,9 @@ public class RoomOccupancy {
         return hotelGuest;
     }
 
-    public Booking getBooking() {
-        return booking;
-    }
+//    public Booking getBooking() {
+//        return booking;
+//    }
 
     @Override
     public String toString() {
@@ -69,7 +76,7 @@ public class RoomOccupancy {
                 ", fromDate=" + fromDate +
                 ", toDate=" + toDate +
                 ", hotelGuest=" + hotelGuest +
-                ", booking=" + booking +
+//                ", booking=" + booking +
                 '}';
     }
 }
