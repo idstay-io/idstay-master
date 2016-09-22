@@ -17,16 +17,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class IdstaySite {
     public static void main(String[] args) {
         new IdstaySpringApplication(IdstaySite.class).run(args);
-//        SpringApplication.run(IdstaySite.class);
-        System.out.println("io.idstay Web Application Started:");
     }
 
-    @Bean
-    //@Profile(IdstayProfiles.STANDALONE)
-    public ServletRegistrationBean h2Console() {
-        System.out.println(".........................");
-        ServletRegistrationBean reg = new ServletRegistrationBean(new WebServlet(), "/console/*");
-        reg.setLoadOnStartup(1);
-        return reg;
-    }
+
 }

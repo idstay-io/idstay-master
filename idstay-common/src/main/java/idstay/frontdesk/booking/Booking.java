@@ -25,8 +25,8 @@ public class Booking {
     @JoinColumn(name="room_id", nullable = false)
     private Room room;
 
-    @OneToMany(fetch=FetchType.LAZY, mappedBy = "booking")
-    private Collection<RoomOccupancy> roomOccupancies;
+//    @OneToMany(fetch=FetchType.LAZY, mappedBy = "room_occupancy_id")
+//    private Collection<RoomOccupancy> roomOccupancies;
 
     @Embedded
     private BookingChannelInformation bookingChannelInformation;

@@ -1,4 +1,4 @@
-package idstay;
+package idstay.appconfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,31 +19,22 @@ public abstract class DatabaseConfig {
         dataSource.setTestOnReturn(false);
     }
 
-    protected void h2Config(org.apache.tomcat.jdbc.pool.DataSource dataSource) {
-        dataSource.setDriverClassName("org.h2.Driver");
-        dataSource.setUrl("jdbc:h2:mem:idstay;MODE=MySQL");
-        dataSource.setUsername("sa");
-        dataSource.setPassword("");
-        dataSource.setValidationQuery("SELECT 1");
-    }
-
     protected void mysqlConfig(org.apache.tomcat.jdbc.pool.DataSource dataSource) {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/idstay");
-        dataSource.setUsername("root");
-        dataSource.setPassword("root");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/idstay2");
+        dataSource.setUsername("idstay_app_user");
+        dataSource.setPassword("_p@ssword_");
         dataSource.setValidationQuery("SELECT 1");
     }
 }
 
 @Configuration
-@Profile(IdstayProfiles.DEVELOPMENT)
+@Profile({IdstayProfiles.STANDALONE, IdstayProfiles.STAGING})
 class StandaloneDatabaseConfig extends DatabaseConfig {
-
     @Bean
     public DataSource dataSource() {
         org.apache.tomcat.jdbc.pool.DataSource dataSource = new org.apache.tomcat.jdbc.pool.DataSource();
-        h2Config(dataSource);
+        mysqlConfig(dataSource);
         configureDataSource(dataSource);
         return dataSource;
     }

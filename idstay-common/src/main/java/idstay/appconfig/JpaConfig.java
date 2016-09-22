@@ -1,4 +1,4 @@
-package idstay;
+package idstay.appconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -50,23 +50,23 @@ public abstract class JpaConfig {
     abstract Properties additionalProperties();
 }
 
-//@Configuration
-//@EnableTransactionManagement
-//@Profile(IdstayProfiles.STANDALONE)
-//class ProductionConfig2 extends JpaConfig{
-//
-//    public Properties additionalProperties() {
-//        Properties properties = new Properties();
-//        properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
-//        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-//        return properties;
-//    }
-//}
+@Configuration
+@EnableTransactionManagement
+@Profile({IdstayProfiles.STAGING, IdstayProfiles.PRODUCTION})
+class ProductionConfig extends JpaConfig{
+
+    public Properties additionalProperties() {
+        Properties properties = new Properties();
+        properties.setProperty("hibernate.hbm2ddl.auto", "validate");
+        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+        return properties;
+    }
+}
 
 @Configuration
 @EnableTransactionManagement
-@Profile({IdstayProfiles.DEVELOPMENT, IdstayProfiles.PRODUCTION})
-class ProductionConfig extends JpaConfig{
+@Profile({IdstayProfiles.STANDALONE})
+class StandaloneConfig extends JpaConfig{
 
     public Properties additionalProperties() {
         Properties properties = new Properties();

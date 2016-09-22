@@ -5,6 +5,7 @@ import idstay.frontdesk.booking.support.RoomOccupancyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +17,9 @@ public class RoomOccupancyService {
         return false;
     }
 
+    public List<RoomOccupancy> findByDate(Date date) {
+        return roomOccupancyRepository.findByDate(date);
+    }
 
     @Autowired
     public void setRoomOccupancyRepository(RoomOccupancyRepository roomOccupancyRepository) {
