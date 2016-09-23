@@ -1,12 +1,12 @@
 package idstay.frontdesk.booking;
 
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import idstay.profiles.hotelguest.HotelGuest;
 import org.apache.commons.lang3.Validate;
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
+@Table(name="booking")
 public class Booking {
 
     @Id

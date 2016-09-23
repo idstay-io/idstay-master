@@ -5,9 +5,9 @@ import idstay.housekeeping.common.CleaningStatus;
 import idstay.housekeeping.common.Remarks;
 import idstay.housekeeping.common.ReservationStatus;
 import idstay.housekeeping.common.RoomStatus;
-import idstay.configuration.hotel.dto.RoomDto;
-import idstay.configuration.hotel.dto.RoomTypeDto;
-import idstay.configuration.crew.dto.CrewDto;
+import idstay.hotelconfig.dto.hotel.RoomDto;
+import idstay.hotelconfig.dto.hotel.RoomTypeDto;
+import idstay.hotelconfig.dto.crew.CrewDto;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 

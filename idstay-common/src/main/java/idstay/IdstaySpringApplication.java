@@ -13,7 +13,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 import static java.lang.String.format;
 import static org.springframework.util.StringUtils.arrayToCommaDelimitedString;
-import static idstay.appconfig.IdstayProfiles.*;
+import static idstay.IdstayProfiles.*;
 
 public class IdstaySpringApplication extends SpringApplication {
     private static final Logger logger = LoggerFactory.getLogger(IdstaySpringApplication.class);

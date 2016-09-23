@@ -1,6 +1,6 @@
-package idstay.configuration.hotel;
+package idstay.hotelconfig.hotel;
 
-import idstay.configuration.hotel.support.HotelRepository;
+import idstay.hotelconfig.hotel.support.HotelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

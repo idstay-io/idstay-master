@@ -1,6 +1,6 @@
-package idstay.configuration.hotel.support;
+package idstay.hotelconfig.hotel.support;
 
-import idstay.configuration.hotel.Hotel;
+import idstay.hotelconfig.hotel.Hotel;
 import org.springframework.data.repository.CrudRepository;
 
 public interface HotelRepository extends CrudRepository<Hotel, Long>{

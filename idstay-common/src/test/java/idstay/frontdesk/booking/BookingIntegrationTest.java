@@ -1,12 +1,12 @@
 package idstay.frontdesk.booking;
 
 import idstay.TestConfig;
-import idstay.configuration.hotel.Hotel;
-import idstay.configuration.hotel.Room;
-import idstay.configuration.hotel.RoomType;
-import idstay.configuration.hotel.support.HotelRepository;
-import idstay.configuration.hotel.support.RoomRepository;
-import idstay.configuration.hotel.support.RoomTypeRepository;
+import idstay.hotelconfig.hotel.Hotel;
+import idstay.hotelconfig.hotel.Room;
+import idstay.hotelconfig.hotel.RoomType;
+import idstay.hotelconfig.hotel.support.HotelRepository;
+import idstay.hotelconfig.hotel.support.RoomRepository;
+import idstay.hotelconfig.hotel.support.RoomTypeRepository;
 import idstay.frontdesk.booking.support.BookingRepository;
 import idstay.frontdesk.booking.support.RoomOccupancyRepository;
 import idstay.profiles.hotelguest.HotelGuest;

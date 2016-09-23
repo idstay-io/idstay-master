@@ -1,6 +1,6 @@
 package idstay.frontdesk.booking;
 
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import org.springframework.stereotype.Service;
 
 @Service

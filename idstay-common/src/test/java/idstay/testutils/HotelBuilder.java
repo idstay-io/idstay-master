@@ -1,7 +1,7 @@
 package idstay.testutils;
 
 
-import idstay.configuration.hotel.Hotel;
+import idstay.hotelconfig.hotel.Hotel;
 
 public class HotelBuilder {
     private Long id;

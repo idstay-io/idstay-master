@@ -4,8 +4,6 @@ package idstay.crm;
 import idstay.common.util.DateTimeUtil;
 import idstay.frontdesk.booking.RoomOccupancy;
 import idstay.profiles.hotelguest.HotelGuest;
-import idstay.profiles.hotelguest.support.HotelGuestRepository;
-import org.apache.commons.lang3.time.DateUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -16,18 +14,10 @@ import java.util.List;
 
 import static org.junit.Assert.fail;
 
-import idstay.configuration.hotel.Room;
-import idstay.profiles.hotelguest.HotelGuest;
-import idstay.profiles.hotelguest.HotelGuestService;
-import idstay.testutils.RoomBuilder;
 import org.junit.Before;
-import org.junit.Test;
 
-import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import java.util.Optional;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;

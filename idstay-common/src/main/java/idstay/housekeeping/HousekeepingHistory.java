@@ -1,13 +1,16 @@
 package idstay.housekeeping;
 
 import idstay.housekeeping.common.Remarks;
-import idstay.configuration.crew.Crew;
+import idstay.hotelconfig.crew.Crew;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 import java.util.Set;
 
 @Entity
+@Table(name="housekeeping_history")
 public class HousekeepingHistory {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)

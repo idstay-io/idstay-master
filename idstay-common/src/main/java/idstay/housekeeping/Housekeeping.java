@@ -4,14 +4,15 @@ import idstay.housekeeping.common.CleaningStatus;
 import idstay.housekeeping.common.Remarks;
 import idstay.housekeeping.common.ReservationStatus;
 import idstay.housekeeping.common.RoomStatus;
-import idstay.configuration.hotel.Room;
-import idstay.configuration.hotel.RoomType;
+import idstay.hotelconfig.hotel.Room;
+import idstay.hotelconfig.hotel.RoomType;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,6 +20,7 @@ import java.util.Set;
 
 
 @Entity
+@Table(name="housekeeping")
 public class Housekeeping {
 
     @Id

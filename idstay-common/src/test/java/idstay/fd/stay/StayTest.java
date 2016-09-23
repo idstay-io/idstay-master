@@ -1,14 +1,5 @@
 package idstay.fd.stay;
 
-import idstay.configuration.hotel.Room;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;

@@ -1,6 +1,6 @@
 package idstay.frontdesk.booking;
 
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import idstay.profiles.customer.CustomerService;
 import idstay.profiles.hotelguest.HotelGuest;
 import idstay.profiles.hotelguest.HotelGuestService;

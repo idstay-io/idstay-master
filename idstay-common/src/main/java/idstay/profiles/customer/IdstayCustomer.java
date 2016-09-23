@@ -3,7 +3,8 @@ package idstay.profiles.customer;
 import javax.persistence.*;
 
 @Entity
-public class Customer {
+@Table(name="idstay_customer")
+public class IdstayCustomer {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name="customer_id")
@@ -11,8 +12,8 @@ public class Customer {
     private String email;
     private String name;
 
-    protected Customer() {}
-    public Customer(final String email) {
+    protected IdstayCustomer() {}
+    public IdstayCustomer(final String email) {
         this.email = email;
     }
 

@@ -1,7 +1,7 @@
 package idstay.frontdesk.booking;
 
 
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import idstay.frontdesk.booking.support.BookingRepository;
 import idstay.frontdesk.booking.support.InValidBookingException;
 import org.springframework.beans.factory.annotation.Autowired;

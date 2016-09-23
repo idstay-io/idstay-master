@@ -1,36 +1,25 @@
 package idstay.crm;
 
-import idstay.IdstaySpringApplication;
 import idstay.TestConfig;
 import idstay.common.util.DateTimeUtil;
-import idstay.configuration.hotel.Hotel;
-import idstay.configuration.hotel.Room;
-import idstay.configuration.hotel.RoomType;
-import idstay.configuration.hotel.support.HotelRepository;
-import idstay.configuration.hotel.support.RoomRepository;
-import idstay.configuration.hotel.support.RoomTypeRepository;
+import idstay.hotelconfig.hotel.Hotel;
+import idstay.hotelconfig.hotel.Room;
+import idstay.hotelconfig.hotel.RoomType;
+import idstay.hotelconfig.hotel.support.HotelRepository;
+import idstay.hotelconfig.hotel.support.RoomRepository;
+import idstay.hotelconfig.hotel.support.RoomTypeRepository;
 import idstay.frontdesk.booking.RoomOccupancy;
 import idstay.frontdesk.booking.RoomOccupancyService;
 import idstay.frontdesk.booking.support.RoomOccupancyRepository;
 import idstay.profiles.hotelguest.HotelGuest;
 import idstay.profiles.hotelguest.support.HotelGuestRepository;
 import idstay.testutils.*;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration;
-import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.context.annotation.Profile;
-import org.springframework.data.annotation.Transient;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import javax.transaction.Transactional;
 
 import java.text.ParseException;
 

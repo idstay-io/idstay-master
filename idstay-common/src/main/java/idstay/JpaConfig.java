@@ -1,4 +1,4 @@
-package idstay.appconfig;
+package idstay;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +15,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
+
+import static idstay.IdstayProfiles.*;
 
 
 public abstract class JpaConfig {
@@ -52,7 +54,7 @@ public abstract class JpaConfig {
 
 @Configuration
 @EnableTransactionManagement
-@Profile({IdstayProfiles.STAGING, IdstayProfiles.PRODUCTION})
+@Profile({STAGING, PRODUCTION})
 class ProductionConfig extends JpaConfig{
 
     public Properties additionalProperties() {
@@ -65,12 +67,12 @@ class ProductionConfig extends JpaConfig{
 
 @Configuration
 @EnableTransactionManagement
-@Profile({IdstayProfiles.STANDALONE})
+@Profile({STANDALONE})
 class StandaloneConfig extends JpaConfig{
 
     public Properties additionalProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.hbm2ddl.auto", "validate");
+        properties.setProperty("hibernate.hbm2ddl.auto", "create");
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         return properties;
     }

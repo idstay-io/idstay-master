@@ -1,4 +1,4 @@
-package idstay.configuration.hotel;
+package idstay.hotelconfig.hotel;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

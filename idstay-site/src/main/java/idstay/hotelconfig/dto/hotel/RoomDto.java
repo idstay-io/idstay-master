@@ -1,6 +1,6 @@
-package idstay.configuration.hotel.dto;
+package idstay.hotelconfig.dto.hotel;
 
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 

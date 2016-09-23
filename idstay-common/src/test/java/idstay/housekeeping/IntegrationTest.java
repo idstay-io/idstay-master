@@ -1,8 +1,8 @@
 package idstay.housekeeping;
 
 import idstay.TestConfig;
-import idstay.configuration.crew.Crew;
-import idstay.configuration.crew.CrewService;
+import idstay.hotelconfig.crew.Crew;
+import idstay.hotelconfig.crew.CrewService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

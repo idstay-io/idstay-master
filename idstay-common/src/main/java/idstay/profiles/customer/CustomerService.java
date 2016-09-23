@@ -10,7 +10,7 @@ import java.util.Optional;
 public class CustomerService {
     private CustomerRepository customerRepository;
 
-    public Optional<Customer> findByEmail(final String email) {
+    public Optional<IdstayCustomer> findByEmail(final String email) {
         return null;
     }
 

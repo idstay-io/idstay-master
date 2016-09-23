@@ -1,7 +1,7 @@
 package idstay.testutils;
 
 import idstay.common.util.DateTimeUtil;
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import idstay.frontdesk.booking.RoomOccupancy;
 import idstay.profiles.hotelguest.HotelGuest;
 

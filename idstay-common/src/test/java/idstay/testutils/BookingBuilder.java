@@ -1,6 +1,6 @@
 package idstay.testutils;
 
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import idstay.frontdesk.booking.Booking;
 import idstay.frontdesk.booking.BookingChannelInformation;
 import idstay.frontdesk.booking.RoomOccupancy;

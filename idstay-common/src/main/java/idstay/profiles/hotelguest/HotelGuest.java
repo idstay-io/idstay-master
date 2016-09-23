@@ -1,11 +1,12 @@
 package idstay.profiles.hotelguest;
 
 
-import idstay.profiles.customer.Customer;
+import idstay.profiles.customer.IdstayCustomer;
 
 import javax.persistence.*;
 
 @Entity
+@Table(name="hotel_guest")
 public class HotelGuest {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -79,7 +80,7 @@ public class HotelGuest {
                 '}';
     }
 
-    public static HotelGuest build(Customer customer) {
+    public static HotelGuest build(IdstayCustomer customer) {
         return new HotelGuest(customer.getEmail());
     }
 }

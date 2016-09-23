@@ -1,13 +1,14 @@
 package idstay.frontdesk.booking;
 
 
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import idstay.profiles.hotelguest.HotelGuest;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name="room_occupancy")
 public class RoomOccupancy {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

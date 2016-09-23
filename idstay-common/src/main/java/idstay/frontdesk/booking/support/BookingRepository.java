@@ -1,8 +1,7 @@
 package idstay.frontdesk.booking.support;
 
-import idstay.configuration.hotel.Room;
+import idstay.hotelconfig.hotel.Room;
 import idstay.frontdesk.booking.Booking;
-import idstay.frontdesk.booking.StayPeriod;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
