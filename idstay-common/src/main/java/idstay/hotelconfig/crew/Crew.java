@@ -1,4 +1,4 @@
-package idstay.configuration.crew;
+package idstay.hotelconfig.crew;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.util.Locale;
 
 @Entity
+@Table(name="crew")
 public class Crew {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)

@@ -1,6 +1,6 @@
-package idstay.configuration.crew.dto;
+package idstay.hotelconfig.dto.crew;
 
-import idstay.configuration.crew.Crew;
+import idstay.hotelconfig.crew.Crew;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 

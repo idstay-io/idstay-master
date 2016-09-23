@@ -1,6 +1,6 @@
-package idstay.configuration.crew;
+package idstay.hotelconfig.crew;
 
-import idstay.configuration.crew.support.CrewRepository;
+import idstay.hotelconfig.crew.support.CrewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
