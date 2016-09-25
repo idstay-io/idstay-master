@@ -1,13 +1,12 @@
 buildscript {
     repositories {
-        mavenCentral()
         ext.springRepo = 'http://repo.spring.io/libs-release'
         mavenLocal()
         maven { url springRepo }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
-        classpath 'io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE'
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+        classpath 'io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE'
     }
 }
 

@@ -1,9 +1,7 @@
 package idstay.frontdesk.common;
 
 public enum BookingChannel {
-    OTA,
-    PHONE,
-    Email,
+    Reservation,
     Walk_In,
     Comp
 }

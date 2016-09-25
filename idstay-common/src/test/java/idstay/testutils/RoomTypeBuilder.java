@@ -5,13 +5,12 @@ import idstay.hotelconfig.hotel.Hotel;
 import idstay.hotelconfig.hotel.RoomType;
 
 public class RoomTypeBuilder {
-    private long id;
+    private Long id ;
     private String roomTypeName;
     private int sortId = 0;
     private Hotel hotel;
 
     public RoomTypeBuilder() {
-        this.id = 1L;
         this.roomTypeName = "CLASSIC";
         this.sortId = 1;
         this.hotel = HotelBuilder.hotel().build();
@@ -42,7 +41,10 @@ public class RoomTypeBuilder {
     }
 
     public RoomType build() {
-        return new RoomType(id, roomTypeName, sortId, hotel);
+        if (id != null)
+            return new RoomType(id, roomTypeName, sortId, hotel);
+
+        return new RoomType(roomTypeName, hotel);
     }
 
 

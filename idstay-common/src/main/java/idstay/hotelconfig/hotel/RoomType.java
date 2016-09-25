@@ -6,12 +6,15 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import javax.persistence.*;
 
 @Entity
+@Table(name="room_type")
 public class RoomType {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="room_type_id")
     private long id;
+    @Column(name="room_type_name")
     private String roomTypeName;
+
     private int sortId = 0;
 
     @ManyToOne

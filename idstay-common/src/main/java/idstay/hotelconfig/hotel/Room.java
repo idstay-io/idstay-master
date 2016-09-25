@@ -6,6 +6,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import javax.persistence.*;
 
 @Entity
+@Table(name="room")
 public class Room {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)

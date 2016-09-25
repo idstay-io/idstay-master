@@ -23,8 +23,13 @@ public class DateTimeUtil {
         return df.format(getLocalDate());
     }
 
-    public static Date parseDate(String dateString) throws ParseException {
+    public static Date parseDate(String dateString) {
         SimpleDateFormat conv = new SimpleDateFormat("yyyy.MM.dd");
-        return conv.parse(dateString);
+
+        try {
+            return conv.parse(dateString);
+        } catch (ParseException e) {
+            throw  new RuntimeException("ParseException: " + dateString);
+        }
     }
 }

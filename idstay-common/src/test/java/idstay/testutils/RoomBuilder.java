@@ -55,6 +55,7 @@ public class RoomBuilder {
     }
 
     public Room build() {
+        if (id !=null) new Room(id, roomName, floor, sortId, roomType);
         return new Room(roomName, roomType);
     }
 }

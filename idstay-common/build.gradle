@@ -1,7 +1,7 @@
 afterEvaluate {
     dependencyManagement {
         imports {
-            mavenBom('io.spring.platform:platform-bom:2.0.5.RELEASE')
+            mavenBom('io.spring.platform:platform-bom:2.0.8.RELEASE')
         }
     }
 }
