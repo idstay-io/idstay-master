@@ -1,5 +1,6 @@
 package idstay.payment;
 
+import idstay.IntegrationTestBase;
 import idstay.common.util.DateTimeUtil;
 import idstay.crm.HotelGuestUse;
 import idstay.crm.support.HotelGuestUseRepository;
@@ -22,7 +23,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by minsoo.kim@jkglobe.com on 16. 9. 24.
  */
-public class PaymentInventoryTest extends IntegrationTestBase{
+public class PaymentInventoryTest extends IntegrationTestBase {
     @Autowired
     PaymentInventoryRepository repository;
 

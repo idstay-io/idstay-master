@@ -51,6 +51,26 @@ public class Stay {
         this.hotelGuestProfile = hotelGuestProfile;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public StayPeriod getStayPeriod() {
+        return stayPeriod;
+    }
+
+    public BookingChannel getBookingChannel() {
+        return bookingChannel;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public HotelGuestProfile getHotelGuestProfile() {
+        return hotelGuestProfile;
+    }
+
     @Override
     public String toString() {
         return "Stay{" +

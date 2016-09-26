@@ -1,4 +1,4 @@
-package idstay.payment;
+package idstay;
 
 import idstay.TestConfig;
 import idstay.hotelconfig.hotel.Hotel;

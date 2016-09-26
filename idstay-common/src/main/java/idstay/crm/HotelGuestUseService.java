@@ -1,6 +1,7 @@
 package idstay.crm;
 
 import idstay.crm.support.HotelGuestUseRepository;
+import idstay.profiles.hotelguest.HotelGuestProfile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,10 @@ public class HotelGuestUseService {
 
     public List<HotelGuestUse> getGuestUseByDate(Date date) {
         return hotelGuestUseRepository.findAll();
+    }
+
+    public HotelGuestUse initGuestUse(final Date date, final HotelGuestProfile hotelGuestProfile) {
+        return hotelGuestUseRepository.save(new HotelGuestUse(date, hotelGuestProfile));
     }
 
     @Autowired
