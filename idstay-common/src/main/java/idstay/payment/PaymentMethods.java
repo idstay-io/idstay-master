@@ -1,4 +1,4 @@
-package idstay.frontdesk.common;
+package idstay.payment;
 
 public enum  PaymentMethods {
     Paypal,

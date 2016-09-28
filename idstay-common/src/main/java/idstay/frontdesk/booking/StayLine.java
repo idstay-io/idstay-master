@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Entity
 @Table(name="room_occupancy")
-public class RoomOccupancy {
+public class StayLine {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name="room_occupancy_id")
@@ -32,15 +32,15 @@ public class RoomOccupancy {
 //    @JoinColumn(name="booking_id")
 //    private Booking booking;
 
-    protected RoomOccupancy() {}
-    public RoomOccupancy(final Room room, final Date fromDate, final Date toDate) {
+    protected StayLine() {}
+    public StayLine(final Room room, final Date fromDate, final Date toDate) {
         this.room = room;
         this.fromDate = fromDate;
         this.toDate = toDate;
     }
 
     /* for Junit only */
-    public RoomOccupancy(Long id, final Room room, final Date fromDate, final Date toDate) {
+    public StayLine(Long id, final Room room, final Date fromDate, final Date toDate) {
         this(room, fromDate, toDate);
         this.id = id;
     }
@@ -71,7 +71,7 @@ public class RoomOccupancy {
 
     @Override
     public String toString() {
-        return "RoomOccupancy{" +
+        return "StayLine{" +
                 "id=" + id +
                 ", room=" + room +
                 ", fromDate=" + fromDate +

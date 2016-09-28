@@ -1,8 +1,8 @@
 package idstay.testutils;
 
 import idstay.common.util.DateTimeUtil;
+import idstay.frontdesk.booking.StayLine;
 import idstay.hotelconfig.hotel.Room;
-import idstay.frontdesk.booking.RoomOccupancy;
 import idstay.profiles.hotelguest.HotelGuest;
 
 import java.util.Date;
@@ -51,8 +51,8 @@ public class RoomOccupancyBuilder {
         return this;
     }
 
-    public RoomOccupancy build() {
-        return new RoomOccupancy(id, room, fromDate, toDate);
+    public StayLine build() {
+        return new StayLine(id, room, fromDate, toDate);
 
     }
 }

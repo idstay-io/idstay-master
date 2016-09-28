@@ -1,9 +1,9 @@
 package idstay.testutils;
 
+import idstay.frontdesk.booking.StayLine;
 import idstay.hotelconfig.hotel.Room;
 import idstay.frontdesk.booking.Booking;
 import idstay.frontdesk.booking.BookingChannelInformation;
-import idstay.frontdesk.booking.RoomOccupancy;
 import idstay.frontdesk.booking.StayInformation;
 import idstay.profiles.hotelguest.HotelGuest;
 
@@ -14,7 +14,7 @@ public class BookingBuilder {
     private StayInformation stayInformation;
     private HotelGuest hotelGuest;
     private Room room;
-    private Collection<RoomOccupancy> roomOccupancies;
+    private Collection<StayLine> roomOccupancies;
     private BookingChannelInformation bookingChannelInformation;
 
     private BookingBuilder() {}
@@ -42,7 +42,7 @@ public class BookingBuilder {
         return this;
     }
 
-    public BookingBuilder roomOccupancies(Collection<RoomOccupancy> roomOccupancies){
+    public BookingBuilder roomOccupancies(Collection<StayLine> roomOccupancies){
         this.roomOccupancies = roomOccupancies;
         return this;
     }

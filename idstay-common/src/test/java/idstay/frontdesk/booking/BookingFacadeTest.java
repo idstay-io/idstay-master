@@ -29,7 +29,7 @@ public class BookingFacadeTest {
     HotelGuestService hotelGuestService;
 
     @Mock
-    RoomOccupancyService roomOccupancyService;
+    StayService roomOccupancyService;
 
     @Mock
     BookingRules bookingRules;

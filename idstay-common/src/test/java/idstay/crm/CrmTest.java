@@ -35,18 +35,18 @@ public class CrmTest {
 //    private Long id;
 //
 //    @ManyToOne
-//    private RoomOccupancy roomOccupancy;
+//    private StayLine roomOccupancy;
 //    @ManyToOne
 //    private HotelGuest hotelGuest;
 //
 //    //protected HotelGuest() {}
-//    public HotelGuestUse(RoomOccupancy roomOccupancy, HotelGuest hotelGuest) {
+//    public HotelGuestUse(StayLine roomOccupancy, HotelGuest hotelGuest) {
 //        this.roomOccupancy = roomOccupancy;
 //        this.hotelGuest = hotelGuest;
 //    }
 //
 //    /* for junit test only */
-//    public HotelGuestUse(Long id, RoomOccupancy roomOccupancy, HotelGuest hotelGuest) {
+//    public HotelGuestUse(Long id, StayLine roomOccupancy, HotelGuest hotelGuest) {
 //        this(roomOccupancy, hotelGuest);
 //        this.id = id;
 //    }

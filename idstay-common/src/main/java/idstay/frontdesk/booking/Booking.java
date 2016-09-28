@@ -26,7 +26,7 @@ public class Booking {
     private Room room;
 
 //    @OneToMany(fetch=FetchType.LAZY, mappedBy = "room_occupancy_id")
-//    private Collection<RoomOccupancy> roomOccupancies;
+//    private Collection<StayLine> roomOccupancies;
 
     @Embedded
     private BookingChannelInformation bookingChannelInformation;

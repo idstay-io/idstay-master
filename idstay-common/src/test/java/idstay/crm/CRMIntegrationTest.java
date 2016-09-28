@@ -1,7 +1,7 @@
 package idstay.crm;
 
 import idstay.TestConfig;
-import idstay.frontdesk.booking.RoomOccupancyService;
+import idstay.frontdesk.booking.StayService;
 import idstay.frontdesk.booking.support.RoomOccupancyRepository;
 import idstay.hotelconfig.hotel.support.HotelRepository;
 import idstay.hotelconfig.hotel.support.RoomRepository;
@@ -36,7 +36,7 @@ public class CRMIntegrationTest {
     private HotelGuestRepository hotelGuestRepository;
 
     @Autowired
-    private RoomOccupancyService roomOccupancyService;
+    private StayService roomOccupancyService;
 
     @Test
     //@Transactional
@@ -76,14 +76,14 @@ public class CRMIntegrationTest {
 //
 //            HotelGuest minsoo = hotelGuestRepository.save(hotelGuest);
 //
-//            RoomOccupancy roomOccupancy = RoomOccupancyBuilder.roomOccupancy()
+//            StayLine roomOccupancy = RoomOccupancyBuilder.roomOccupancy()
 //                    .room(r201)
 //                    .fromDate(DateTimeUtil.parseDate("2016.01.01"))
 //                    .toDate(DateTimeUtil.parseDate("2016.02.01"))
 //                    .hotelGuest(minsoo)
 //                    .build();
 //
-//            RoomOccupancy occu01 = roomOccupancyRepository.save(roomOccupancy);
+//            StayLine occu01 = roomOccupancyRepository.save(roomOccupancy);
 //        }
 //    }
 }

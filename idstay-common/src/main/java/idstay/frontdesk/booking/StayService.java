@@ -1,32 +1,27 @@
 package idstay.frontdesk.booking;
 
-import idstay.frontdesk.booking.support.StayRepository;
-import idstay.frontdesk.common.BookingChannel;
-import idstay.profiles.hotelguest.HotelGuestProfile;
+import idstay.hotelconfig.hotel.Room;
+import idstay.frontdesk.booking.support.RoomOccupancyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.Date;
+import java.util.List;
 
-/**
- * Created by minsoo.kim@jkglobe.com on 16. 9. 26.
- */
 @Service
 public class StayService {
-    private StayRepository stayRepository;
+    private RoomOccupancyRepository roomOccupancyRepository;
 
-
-    public Optional<Stay> registerStayInfo(final StayPeriod period, final HotelGuestProfile profile) {
-        Stay stay = new Stay(period);
-        stay.setHotelGuestProfile(profile);
-
-        return Optional.of(stayRepository.save(stay));
+    public boolean isValidStay(final Room room, final StayInformation stayInformation) {
+        return false;
     }
 
-
+    public List<StayLine> findByDate(Date date) {
+        return roomOccupancyRepository.findByDate(date);
+    }
 
     @Autowired
-    public void setStayRepository(StayRepository stayRepository) {
-        this.stayRepository = stayRepository;
+    public void setRoomOccupancyRepository(RoomOccupancyRepository roomOccupancyRepository) {
+        this.roomOccupancyRepository = roomOccupancyRepository;
     }
 }

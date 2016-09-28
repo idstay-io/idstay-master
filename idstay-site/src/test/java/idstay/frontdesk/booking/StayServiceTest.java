@@ -4,24 +4,17 @@ package idstay.frontdesk.booking; /**
 
 
 import idstay.IdstaySite;
-import idstay.frontdesk.booking.RoomOccupancyService;
-import idstay.frontdesk.booking.Stay;
-import idstay.frontdesk.booking.StayPeriod;
-import idstay.frontdesk.booking.StayService;
-import idstay.frontdesk.booking.support.RoomOccupancyRepository;
-import idstay.hotelconfig.hotel.support.HotelRepository;
-import idstay.hotelconfig.hotel.support.RoomRepository;
-import idstay.hotelconfig.hotel.support.RoomTypeRepository;
+import idstay.crm.HotelGuestSpending;
+import idstay.crm.support.HotelGuestSpendingRepository;
+import idstay.payment.support.PaymentLineRepository;
 import idstay.profiles.hotelguest.HotelGuestProfile;
 import idstay.profiles.hotelguest.support.HotelGuestProfileRepository;
-import idstay.profiles.hotelguest.support.HotelGuestRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.text.ParseException;
 
@@ -32,13 +25,21 @@ import static org.junit.Assert.assertThat;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(IdstaySite.class)
 @ActiveProfiles(profiles = "standalone")
-@Transactional
+
 public class StayServiceTest {
     @Autowired
     private StayService stayService;
 
     @Autowired
     private HotelGuestProfileRepository profileRepository;
+
+    @Autowired
+    private HotelGuestSpendingRepository hotelGuestSpendingRepository;
+
+
+    @Autowired
+    private PaymentLineRepository paymentLineRepository;
+
 
     @Test
     public void foo() throws ParseException {
@@ -52,6 +53,17 @@ public class StayServiceTest {
 
         assertThat(stay, is(notNullValue()));
         assertThat(stay.getId(), is(2L));
+
+        HotelGuestSpending spending = new HotelGuestSpending(stay);
+
+        spending = hotelGuestSpendingRepository.save(spending);
+
+        assertThat(spending.getId(), is(notNullValue()));
+
+
+
+
+
     }
 
 }

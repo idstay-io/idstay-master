@@ -3,6 +3,7 @@ package idstay.frontdesk.booking;
 import idstay.frontdesk.common.BookingChannel;
 import idstay.hotelconfig.hotel.Room;
 import idstay.profiles.hotelguest.HotelGuestProfile;
+import org.apache.commons.lang3.Validate;
 
 import javax.persistence.*;
 
@@ -20,6 +21,9 @@ public class Stay {
     @Embedded
     private StayPeriod stayPeriod;
 
+    private int adults;
+    private int children;
+
     @Enumerated(EnumType.STRING)
     private BookingChannel bookingChannel;
 
@@ -31,10 +35,15 @@ public class Stay {
     @JoinColumn(name="hotel_guest_profile_id")
     private HotelGuestProfile hotelGuestProfile;
 
-
     protected Stay() {}
-    public Stay(StayPeriod stayPeriod) {
+    public Stay(final StayPeriod stayPeriod, final int adults, final int children) {
+        Validate.notNull(stayPeriod, "stayPeriod in is required");
+        Validate.notNull(adults, "adults in is required");
+        Validate.notNull(children, "children in is required");
+
         this.stayPeriod = stayPeriod;
+        this.adults = adults;
+        this.children = children;
     }
 
     /* for unit test only */
