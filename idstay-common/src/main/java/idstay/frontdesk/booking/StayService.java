@@ -10,18 +10,18 @@ import java.util.List;
 
 @Service
 public class StayService {
-    private RoomOccupancyRepository roomOccupancyRepository;
 
-    public boolean isValidStay(final Room room, final StayInformation stayInformation) {
-        return false;
-    }
 
-    public List<StayLine> findByDate(Date date) {
-        return roomOccupancyRepository.findByDate(date);
-    }
-
-    @Autowired
-    public void setRoomOccupancyRepository(RoomOccupancyRepository roomOccupancyRepository) {
-        this.roomOccupancyRepository = roomOccupancyRepository;
-    }
+//    public boolean isValidStay(final Room room, final StayInformation stayInformation) {
+//        return false;
+//    }
+//
+//    public List<StayLine> findByDate(Date date) {
+//        return roomOccupancyRepository.findByDate(date);
+//    }
+//
+//    @Autowired
+//    public void setRoomOccupancyRepository(RoomOccupancyRepository roomOccupancyRepository) {
+//        this.roomOccupancyRepository = roomOccupancyRepository;
+//    }
 }

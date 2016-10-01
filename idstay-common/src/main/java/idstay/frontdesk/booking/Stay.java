@@ -48,7 +48,7 @@ public class Stay {
 
     /* for unit test only */
     public Stay(Long id, StayPeriod stayPeriod) {
-        this(stayPeriod);
+        //this(stayPeriod);
         this.id = id;
     }
 
