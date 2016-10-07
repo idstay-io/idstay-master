@@ -1,7 +1,7 @@
 package idstay.housekeeping;
 
 import idstay.housekeeping.common.Remarks;
-import idstay.hotelconfig.crew.Crew;
+import idstay.backoffice.config.crew.Crew;
 
 import javax.persistence.*;
 import javax.persistence.Entity;

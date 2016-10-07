@@ -1,15 +1,8 @@
 package idstay;
 
-import idstay.TestConfig;
-import idstay.hotelconfig.hotel.Hotel;
-import idstay.hotelconfig.hotel.Room;
-import idstay.hotelconfig.hotel.RoomType;
-import idstay.hotelconfig.hotel.support.HotelRepository;
-import idstay.hotelconfig.hotel.support.RoomRepository;
-import idstay.hotelconfig.hotel.support.RoomTypeRepository;
-import idstay.testutils.HotelBuilder;
-import idstay.testutils.RoomBuilder;
-import idstay.testutils.RoomTypeBuilder;
+import idstay.backoffice.config.hotel.support.HotelRepository;
+import idstay.backoffice.config.hotel.support.RoomRepository;
+import idstay.backoffice.config.hotel.support.RoomTypeRepository;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;

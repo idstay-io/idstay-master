@@ -25,7 +25,6 @@ public class DateTimeUtil {
 
     public static Date parseDate(String dateString) {
         SimpleDateFormat conv = new SimpleDateFormat("yyyy.MM.dd");
-
         try {
             return conv.parse(dateString);
         } catch (ParseException e) {

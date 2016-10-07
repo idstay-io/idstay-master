@@ -1,7 +1,7 @@
 package idstay.testutils;
 
-import idstay.hotelconfig.hotel.Room;
-import idstay.hotelconfig.hotel.RoomType;
+import idstay.backoffice.config.hotel.Room;
+import idstay.backoffice.config.hotel.RoomType;
 
 public class RoomBuilder {
     private Long id;

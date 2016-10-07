@@ -1,11 +1,10 @@
 package idstay.frontdesk.booking;
 
-import idstay.frontdesk.common.BookingChannel;
-import idstay.hotelconfig.hotel.Room;
-import idstay.profiles.hotelguest.HotelGuestProfile;
 import org.apache.commons.lang3.Validate;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by minsoo.kim@jkglobe.com on 16. 9. 24.
@@ -15,79 +14,66 @@ import javax.persistence.*;
 @Table(name="stay")
 public class Stay {
 
-    @Id @GeneratedValue(strategy= GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "stay_id")
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "booking_id", insertable = false, updatable = false)
+    private Booking booking;
 
     @Embedded
     private StayPeriod stayPeriod;
 
-    private int adults;
-    private int children;
+//    @OneToMany
+//    @JoinColumn(name = "stay_id")
+//    private List<StayLine> stayLines = new ArrayList<StayLine>();
 
-    @Enumerated(EnumType.STRING)
-    private BookingChannel bookingChannel;
 
-    @ManyToOne
-    @JoinColumn(name="room_id")
-    private Room room;
 
-    @OneToOne
-    @JoinColumn(name="hotel_guest_profile_id")
-    private HotelGuestProfile hotelGuestProfile;
 
+
+
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "stay_id")
+//    @OrderColumn(name="stay_idx")
+    private List<StayLine> stayLines = new ArrayList<StayLine>();
+//
+//    private Long hotelGuestProfileId;
+//
     protected Stay() {}
-    public Stay(final StayPeriod stayPeriod, final int adults, final int children) {
-        Validate.notNull(stayPeriod, "stayPeriod in is required");
-        Validate.notNull(adults, "adults in is required");
-        Validate.notNull(children, "children in is required");
+    public Stay(final StayInfo stayInfo, final Long roomId) {
+        Validate.notNull(stayInfo, "stayInfo is required");
+        Validate.notNull(roomId, "roomId is required");
 
-        this.stayPeriod = stayPeriod;
-        this.adults = adults;
-        this.children = children;
+        this.stayLines.add(new StayLine(stayInfo.getStayPeriod(), roomId));
+
+
     }
 
-    /* for unit test only */
-    public Stay(Long id, StayPeriod stayPeriod) {
-        //this(stayPeriod);
-        this.id = id;
-    }
-
-    public void setBookingChannel(final BookingChannel bookingChannel) {
-        this.bookingChannel = bookingChannel;
-    }
-
-    public void setHotelGuestProfile(final HotelGuestProfile hotelGuestProfile) {
-        this.hotelGuestProfile = hotelGuestProfile;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public StayPeriod getStayPeriod() {
-        return stayPeriod;
-    }
-
-    public BookingChannel getBookingChannel() {
-        return bookingChannel;
-    }
-
-    public Room getRoom() {
-        return room;
-    }
-
-    public HotelGuestProfile getHotelGuestProfile() {
-        return hotelGuestProfile;
-    }
-
-    @Override
-    public String toString() {
-        return "Stay{" +
-                "id=" + id +
-                ", stayPeriod=" + stayPeriod +
-                ", bookingChannel=" + bookingChannel +
-                ", room=" + room +
-                ", hotelGuestProfile=" + hotelGuestProfile +
-                '}';
-    }
+//
+//
+//
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public StayInfo getStayInfo() {
+//        return stayInfo;
+//    }
+//
+//    public Long getHotelGuestProfileId() {
+//        return hotelGuestProfileId;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Stay{" +
+//                "id=" + id +
+//                ", stayInfo=" + stayInfo +
+//                ", hotelGuestProfileId=" + hotelGuestProfileId +
+//                '}';
+//    }
 }

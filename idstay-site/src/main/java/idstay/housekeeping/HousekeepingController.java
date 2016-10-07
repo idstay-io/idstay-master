@@ -7,8 +7,8 @@ import idstay.housekeeping.common.ReservationStatus;
 import idstay.housekeeping.common.RoomStatus;
 import idstay.housekeeping.dto.HousekeepingDto;
 import idstay.housekeeping.support.HousekeepingNotFoundException;
-import idstay.hotelconfig.crew.Crew;
-import idstay.hotelconfig.crew.CrewService;
+import idstay.backoffice.config.crew.Crew;
+import idstay.backoffice.config.crew.CrewService;
 import idstay.hotelconfig.dto.crew.CrewDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,12 +32,7 @@ public class HousekeepingController {
     private HousekeepingService housekeepingService;
     private CrewService crewService;
 
-    @RequestMapping(value="/housekeeping", method = {GET})
-    public String getHousekeeping() {
-        String unDefinedCrew = "select_crew_name";
-        String url = "/hotel/1/housekeepings/" + unDefinedCrew;
-        return "redirect:" + url;
-    }
+
 
     @RequestMapping(value="/hotel/{hotelId}/housekeepings/{crew}", method = GET)
     public String getHousekeepings(@PathVariable("hotelId") Long hotelId,

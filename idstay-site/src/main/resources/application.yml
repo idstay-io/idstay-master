@@ -25,9 +25,9 @@ server:
 
 ---
 
-  spring:
-    profiles: staging,standalone
-  #security:
-  #  require_ssl: true
-  server:
-    port: 8082
+spring:
+  profiles: staging,standalone
+#security:
+#  require_ssl: true
+server:
+  port: 8082

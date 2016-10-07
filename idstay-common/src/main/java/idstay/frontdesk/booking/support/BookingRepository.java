@@ -1,11 +1,10 @@
 package idstay.frontdesk.booking.support;
 
-import idstay.hotelconfig.hotel.Room;
 import idstay.frontdesk.booking.Booking;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface BookingRepository extends CrudRepository<Booking, Long> {
-    List<Booking> findByRoom(Room room);
+/**
+ * Created by minsoo.kim@jkglobe.com on 16. 10. 7.
+ */
+public interface BookingRepository extends JpaRepository<Booking, Long> {
 }

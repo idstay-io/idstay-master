@@ -13,8 +13,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public class CheckoutController {
     private static final Logger logger = LoggerFactory.getLogger(CheckoutController.class);
 
-    @RequestMapping(value="/checkout", method = GET)
+    @RequestMapping(value="/hotel/1/checkouts", method = GET)
     public String checkout() {
+
+
+
+
 
         logger.info("checkout: {}", "by @will");
         return "/frontdesk/purchase_history";

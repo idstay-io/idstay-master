@@ -1,58 +1,49 @@
 package idstay.fd.stay;
 
 import idstay.TestConfig;
-import idstay.frontdesk.booking.Stay;
-import idstay.frontdesk.booking.StayPeriod;
-import idstay.frontdesk.booking.support.StayRepository;
-import idstay.frontdesk.common.BookingChannel;
-import idstay.profiles.hotelguest.HotelGuestProfile;
-import idstay.profiles.hotelguest.support.HotelGuestProfileRepository;
-import org.junit.Test;
+//import idstay.frontdesk.booking.support.StayRepository;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.text.ParseException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(TestConfig.class)
 @ActiveProfiles(profiles = "standalone")
 public class StayTest {
+}
 
-    @Autowired
-    private StayRepository stayRepository;
+//    @Autowired
+//    private StayRepository stayRepository;
+//
+//    @Autowired
+//    private HotelGuestProfileRepository hotelGuestProfileRepository;
+//
+//
+//    @Test
+//    public void foo() throws ParseException {
 
-    @Autowired
-    private HotelGuestProfileRepository hotelGuestProfileRepository;
-
-
-    @Test
-    public void foo() throws ParseException {
-
-        StayPeriod stayPeriod = new StayPeriod("2016.01.01", "2016.01.03");
-        Stay stay = new Stay(stayPeriod);
-        stay.setBookingChannel(BookingChannel.Reservation);
-
-        Stay savedStay = stayRepository.save(stay);
-
-        HotelGuestProfile profile = new HotelGuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
-        HotelGuestProfile savedProfile = hotelGuestProfileRepository.save(profile);
-
-        savedStay.setHotelGuestProfile(savedProfile);
-
-        savedStay = stayRepository.save(stay);
-
-
-
-
-        System.out.println(savedStay);
+//        StayPeriod stayPeriod = new StayPeriod("2016.01.01", "2016.01.03");
+//        Stay stay = new Stay(stayPeriod);
+//        stay.setBookingChannel(BookingChannel.Reservation);
+//
+//        Stay savedStay = stayRepository.save(stay);
+//
+//        HotelGuestProfile profile = new HotelGuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
+//        HotelGuestProfile savedProfile = hotelGuestProfileRepository.save(profile);
+//
+//        savedStay.setHotelGuestProfile(savedProfile);
+//
+//        savedStay = stayRepository.save(stay);
+//
+//
+//
+//
+//        System.out.println(savedStay);
 
 //
 //        this.entityManager.persist(new Stay(1L, stayPeriod));
-    }
-}
+
 
 //    private Long hotelId;
 //    private Room r101;

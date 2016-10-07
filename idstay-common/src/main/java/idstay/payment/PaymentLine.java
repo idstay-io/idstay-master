@@ -1,8 +1,5 @@
 package idstay.payment;
 
-import idstay.common.util.DateTimeUtil;
-import idstay.hotelconfig.hotel.Room;
-
 import javax.persistence.*;
 import java.util.Date;
 

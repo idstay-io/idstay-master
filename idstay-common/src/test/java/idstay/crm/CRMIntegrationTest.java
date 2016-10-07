@@ -1,15 +1,10 @@
 package idstay.crm;
 
 import idstay.TestConfig;
-import idstay.frontdesk.booking.StayService;
-import idstay.frontdesk.booking.support.RoomOccupancyRepository;
-import idstay.hotelconfig.hotel.support.HotelRepository;
-import idstay.hotelconfig.hotel.support.RoomRepository;
-import idstay.hotelconfig.hotel.support.RoomTypeRepository;
-import idstay.profiles.hotelguest.support.HotelGuestRepository;
-import org.junit.Test;
+//import idstay.frontdesk.booking.StayService;
+//import idstay.frontdesk.booking.support.RoomOccupancyRepository;
+//import idstay.profiles.hotelguest.support.HotelGuestRepository;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -20,26 +15,10 @@ import java.text.ParseException;
 @SpringApplicationConfiguration(TestConfig.class)
 @ActiveProfiles(profiles = "standalone")
 public class CRMIntegrationTest {
-    @Autowired
-    private RoomOccupancyRepository roomOccupancyRepository;
 
-    @Autowired
-    private RoomRepository roomRepository;
 
-    @Autowired
-    private HotelRepository hotelRepository;
 
-    @Autowired
-    private RoomTypeRepository roomTypeRepository;
 
-    @Autowired
-    private HotelGuestRepository hotelGuestRepository;
-
-    @Autowired
-    private StayService roomOccupancyService;
-
-    @Test
-    //@Transactional
 
     public void foo() throws ParseException {
 //        init();

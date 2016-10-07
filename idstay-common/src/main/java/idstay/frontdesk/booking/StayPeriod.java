@@ -12,28 +12,26 @@ import org.apache.commons.lang3.*;
 @Embeddable
 public class StayPeriod {
     @Temporal(TemporalType.DATE)
-    private Date checkin;
+    private Date fromDate;
     @Temporal(TemporalType.DATE)
-    private Date checkout;
-    private int nights = 0;
+    private Date toDate;
 
     protected StayPeriod() {
     }
 
-    public StayPeriod(final String checkin, final String checkout) throws ParseException {
-        Validate.notNull(checkin, "Check in is required");
-        Validate.notNull(checkout, "check out is required");
+    public StayPeriod(final String fromDate, final String toDate) throws ParseException {
+        Validate.notNull(fromDate, "fromDate in is required");
+        Validate.notNull(toDate, "toDate out is required");
 
-        this.checkin = DateTimeUtil.parseDate(checkin);
-        this.checkout = DateTimeUtil.parseDate(checkout);
+        this.fromDate = DateTimeUtil.parseDate(fromDate);
+        this.toDate = DateTimeUtil.parseDate(toDate);
     }
 
     @Override
     public String toString() {
         return "StayPeriod{" +
-                "checkin=" + checkin +
-                ", checkout=" + checkout +
-                ", nights=" + nights +
+                "fromDate=" + fromDate +
+                ", toDate=" + toDate +
                 '}';
     }
 }
