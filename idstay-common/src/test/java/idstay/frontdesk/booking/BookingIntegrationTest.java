@@ -7,7 +7,7 @@ import idstay.backoffice.config.hotel.RoomType;
 import idstay.backoffice.config.hotel.support.HotelRepository;
 import idstay.backoffice.config.hotel.support.RoomRepository;
 import idstay.backoffice.config.hotel.support.RoomTypeRepository;
-//import idstay.frontdesk.booking.support.BookingRepository;
+//import idstay.frontdesk.reservation.support.ReservationRepository;
 //import idstay.frontdesk.booking.support.RoomOccupancyRepository;
 //import idstay.profiles.hotelguest.HotelGuest;
 //import idstay.profiles.hotelguest.support.HotelGuestRepository;
@@ -42,7 +42,7 @@ public class BookingIntegrationTest {
 //    private HotelGuestRepository hotelGuestRepository;
 //
 //    @Autowired
-//    private BookingRepository bookingRepository;
+//    private ReservationRepository bookingRepository;
 //
 //    @Test
 //    @Transactional

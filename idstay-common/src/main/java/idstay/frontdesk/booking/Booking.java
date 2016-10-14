@@ -12,11 +12,13 @@ import java.util.List;
 
 @Entity
 @Table
-public class Booking {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "booking_id")
-    private Long id;
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="booking_type",
+        discriminatorType=DiscriminatorType.STRING
+)
+public abstract class Booking {
+    @EmbeddedId
+    private BookingId bookingId;
 
     @Embedded
     private StayInfo stayInfo;
@@ -24,34 +26,41 @@ public class Booking {
     private Long roomId;
     private Long guestProfileId;
 
-    @OneToMany(orphanRemoval = true)
-    @JoinColumn(name = "booking_id")
-    private List<Stay> stays = new ArrayList<Stay>();
+//    @Enumerated(EnumType.STRING)
+//    @Column(name = "booking_type")
+//    private BookingType bookingType;
+
+//    @OneToMany(orphanRemoval = true)
+//    @JoinColumn(name = "booking_id")
+//    private List<Stay> stays = new ArrayList<Stay>();
 
     protected Booking() {}
-    public Booking(StayInfo stayInfo, Long roomId) {
+    public Booking(final BookingId bookingId, final StayInfo stayInfo, final Long roomId) {
+        Validate.notNull(bookingId, "bookingId in is required");
         Validate.notNull(stayInfo, "stayInfo in is required");
         Validate.notNull(roomId, "roomId in is required");
+        this.bookingId = bookingId;
         this.stayInfo = stayInfo;
         this.roomId = roomId;
     }
 
-    public static Booking newInstance() {
-        return new Booking();
+    @Transient
+    public BookingType getBookingType() {
+        String bookingType = this.getClass().getAnnotation(DiscriminatorValue.class).value();
+        return BookingType.valueOf(bookingType);
     }
 
-
-    public Booking withStay(Stay stay) {
-        this.stays.add(stay);
-        return this;
+    public BookingId getBookingId() {
+        return bookingId;
     }
 
-
-
-    public Long getId() {
-        return id;
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "bookingId=" + bookingId +
+                ", stayInfo=" + stayInfo +
+                ", roomId=" + roomId +
+                ", guestProfileId=" + guestProfileId +
+                '}';
     }
-
-
-
 }

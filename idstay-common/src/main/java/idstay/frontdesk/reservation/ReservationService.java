@@ -1,51 +1,61 @@
 package idstay.frontdesk.reservation;
 
-import idstay.frontdesk.booking.Booking;
-import idstay.frontdesk.booking.RoomAvailabilityService;
-import idstay.frontdesk.booking.Stay;
-import idstay.frontdesk.booking.support.BookingRepository;
-import idstay.frontdesk.booking.StayInfo;
+import idstay.common.util.infra.EntityIdUtil;
+import idstay.common.util.infra.EntityName;
+import idstay.frontdesk.booking.*;
+import idstay.frontdesk.reservation.support.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Created by minsoo.kim@jkglobe.com on 16. 10. 7.
  */
 @Service
 public class ReservationService {
-    private BookingRepository bookingRepository;
+    private EntityIdUtil entityIdUtil;
+    private ReservationRepository reservationRepository;
     private RoomAvailabilityService roomAvailabilityService;
 
-    public Optional<Booking> makeReservation(StayInfo stayInfo, Long roomId) {
-        Booking booking = new Booking(stayInfo, roomId);
-        return Optional.of(bookingRepository.save(booking));
+    public BookingId bookNewReservation(BookingParam.Reservation bookingParam) {
+        BookingId bookingId = getBookingId();
+        Reservation reservation = new Reservation(bookingId, bookingParam.getStayInfo(), bookingParam.getRoomId(), "hahahah");
+        reservation.reservationChannel(bookingParam.getReservationChannel());
+        reservationRepository.save(reservation).getBookingId();
+        return reservation.getBookingId();
     }
 
-    public Optional<Booking> makeReservation(List<Stay> stays) {
-        Booking booking = Booking.newInstance();
+//    public Optional<Booking> makeReservation(List<Stay> stays) {
+//        Booking booking = Booking.newInstance();
+//
+//        for(Stay stay : stays) {
+//            booking.withStay(stay);
+//        }
+//
+//
+//        return Optional.of(reservationRepository.save(booking));
+//    }
 
-        for(Stay stay : stays) {
-            booking.withStay(stay);
-        }
 
-
-        return Optional.of(bookingRepository.save(booking));
+    private BookingId getBookingId() {
+        String id = entityIdUtil.getID(EntityName.BOOKING);
+        return new BookingId(id);
     }
-
 
 
 
     @Autowired
-    public void setBookingRepository(BookingRepository bookingRepository) {
-        this.bookingRepository = bookingRepository;
+    public void setReservationRepository(ReservationRepository reservationRepository) {
+        this.reservationRepository = reservationRepository;
     }
 
     @Autowired
     public void setRoomAvailabilityService(RoomAvailabilityService roomAvailabilityService) {
         this.roomAvailabilityService = roomAvailabilityService;
+    }
+
+    @Autowired
+    public void setEntitySequencesUtil(EntityIdUtil entityIdUtil) {
+        this.entityIdUtil = entityIdUtil;
     }
 
 }

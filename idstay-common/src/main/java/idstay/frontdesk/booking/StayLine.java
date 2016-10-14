@@ -13,7 +13,6 @@ public class StayLine {
     @Column(name = "stay_line_id")
     private Long id;
 
-
     private Long roomId;
 
     @Embedded

@@ -1,6 +1,7 @@
 package idstay.frontdesk.booking;
 
 import org.apache.commons.lang3.Validate;
+import org.springframework.core.annotation.Order;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -21,10 +22,15 @@ public class Stay {
 
     @ManyToOne
     @JoinColumn(name = "booking_id", insertable = false, updatable = false)
+    @OrderColumn(name = "seq")
     private Booking booking;
 
     @Embedded
     private StayPeriod stayPeriod;
+
+
+
+
 
 //    @OneToMany
 //    @JoinColumn(name = "stay_id")

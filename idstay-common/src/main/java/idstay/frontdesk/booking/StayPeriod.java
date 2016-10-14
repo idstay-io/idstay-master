@@ -23,8 +23,8 @@ public class StayPeriod {
         Validate.notNull(fromDate, "fromDate in is required");
         Validate.notNull(toDate, "toDate out is required");
 
-        this.fromDate = DateTimeUtil.parseDate(fromDate);
-        this.toDate = DateTimeUtil.parseDate(toDate);
+        this.fromDate = DateTimeUtil.toDate(fromDate);
+        this.toDate = DateTimeUtil.toDate(toDate);
     }
 
     @Override

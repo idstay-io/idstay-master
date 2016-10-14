@@ -25,7 +25,7 @@ public class StayTest {
 
 //        StayPeriod stayPeriod = new StayPeriod("2016.01.01", "2016.01.03");
 //        Stay stay = new Stay(stayPeriod);
-//        stay.setBookingChannel(BookingChannel.Reservation);
+//        stay.setBookingChannel(ReservationChannel.Reservation);
 //
 //        Stay savedStay = stayRepository.save(stay);
 //

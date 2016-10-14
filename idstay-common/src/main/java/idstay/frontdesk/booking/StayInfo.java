@@ -42,4 +42,13 @@ public class StayInfo {
     public int getChildren() {
         return children;
     }
+
+    @Override
+    public String toString() {
+        return "StayInfo{" +
+                "stayPeriod=" + stayPeriod +
+                ", adults=" + adults +
+                ", children=" + children +
+                '}';
+    }
 }
