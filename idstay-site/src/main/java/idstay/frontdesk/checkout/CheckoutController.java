@@ -21,6 +21,6 @@ public class CheckoutController {
 
 
         logger.info("checkout: {}", "by @will");
-        return "/frontdesk/purchase_history";
+        return "/frontdesk/purchase_history2";
     }
 }

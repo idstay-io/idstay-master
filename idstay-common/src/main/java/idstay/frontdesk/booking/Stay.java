@@ -16,7 +16,7 @@ import java.util.List;
 public class Stay {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "stay_id")
     private Long id;
 

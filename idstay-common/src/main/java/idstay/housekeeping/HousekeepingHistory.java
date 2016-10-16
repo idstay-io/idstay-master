@@ -13,7 +13,7 @@ import java.util.Set;
 @Table(name="housekeeping_history")
 public class HousekeepingHistory {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="housekeepinghistory_id")
     private long id;
     private long housekeepingId = 0;

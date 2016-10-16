@@ -1,18 +1,8 @@
-project:
-  artifactId: idstay-io
-  name: idstay-io
-  description: idstay-io
+spring.profiles: unittest
 
 spring:
   main:
-    sources: idstay.IdstaySite
-  thymeleaf:
-    mode: LEGACYHTML5
-
----
-spring.profiles: development
-
-spring:
+    show-banner: false
   datasource:
     url: jdbc:mysql://localhost:3306/idstay_development
     username: standalone_user
@@ -22,7 +12,7 @@ spring:
     database: MYSQL
     show-sql: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
 
 server:
   port: 8090

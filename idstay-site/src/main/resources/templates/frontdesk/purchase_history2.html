@@ -1,0 +1,83 @@
+<html xmlns:th= "h ttp://www.thymeleaf.org" xmlns:layout= "http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator= "layout/default">
+<head lang= "en">
+    <meta charset="UTF-8">
+    <title>Title......</title>
+</head>
+<body class="makersapp_history">
+<div layout:fragment= "content">
+<div class="spacer"></div>
+<div class="container user_section">
+    <div class="pull-left col-xs-2" id="sandbox-container">
+        <div class="input-group date">
+            <input type="text" class="form-control" value="09/23/2016"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+        </div>
+    </div>
+</div>
+<div class="container floor">
+    <table class="table table-hover purchase-list">
+        <thead>
+        <tr>
+            <th>Room No.</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Guest Name</th>
+            <th class="price">Total Amount</th>
+            <th>Detail</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>202</th>
+            <td>2016.10.02</td>
+            <td>2016.10.03</td>
+            <td>Kim Min-soo</td>
+            <td class="price">KRW 20,000</td>
+            <td>
+                <table class="purchase-detail">
+                    <tr>
+                        <td>바보</td>
+                        <td>01.01.06:30</td>
+                        <td>KRW 2,000</td>
+                    </tr>
+                    <tr>
+                        <td>피자</td>
+                        <td>01.01.06:30</td>
+                        <td>KRW 2,000</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th>203</th>
+            <td>2016.10.01</td>
+            <td>2016.10.03</td>
+            <td>Kim Min-soo</td>
+            <td class="price">KRW 20,000</td>
+            <td>
+                <table class="purchase-detail">
+                    <tr>
+                        <td>브리또</td>
+                        <td>01.01.06:30</td>
+                        <td>KRW 2,000</td>
+                    </tr>
+                    <tr>
+                        <td>피자</td>
+                        <td>01.01.06:30</td>
+                        <td>KRW 2,000</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+<script src="./Makers Hotel_files/jquery.min.js"></script>
+<script src="./Makers Hotel_files/bootstrap.min.js"></script>
+<script type="text/javascript" th:src="@{/css/bootstrap-datepicker.js}"></script>
+
+<script>
+    $('#sandbox-container .input-group.date').datepicker({});
+</script>
+
+</html>

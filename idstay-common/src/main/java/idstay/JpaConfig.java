@@ -20,7 +20,6 @@ import static idstay.IdstayProfiles.*;
 
 
 public abstract class JpaConfig {
-
 //    @Autowired
 //    private DataSource dataSource;
 //
@@ -65,18 +64,18 @@ public abstract class JpaConfig {
 //        return properties;
 //    }
 //}
-//
+
 //@Configuration
 //@EnableTransactionManagement
-//@Profile({STANDALONE})
+//@Profile({DEVELOPMENT})
 //class StandaloneConfig extends JpaConfig{
-//
 //    public Properties additionalProperties() {
 //        Properties properties = new Properties();
 //        properties.setProperty("hibernate.show_sql", "true");
 //        properties.setProperty("hibernate.hbm2ddl.auto", "create");
 //        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-//        properties.setProperty("hibernate.ebj.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy");
+//        properties.setProperty("hibernate.implicit_naming_strategy", "org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl");
+//        properties.setProperty("hibernate.physical_naming_strategy", "fms.util.hibernate.ImprovedNamingStrategy");
 //        return properties;
 //    }
 //}

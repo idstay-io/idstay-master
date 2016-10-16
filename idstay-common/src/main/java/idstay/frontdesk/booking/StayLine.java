@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table
 public class StayLine {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "stay_line_id")
     private Long id;
 

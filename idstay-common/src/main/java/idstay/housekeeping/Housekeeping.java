@@ -24,7 +24,7 @@ import java.util.Set;
 public class Housekeeping {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="housekeeping_id")
     private long id;
 

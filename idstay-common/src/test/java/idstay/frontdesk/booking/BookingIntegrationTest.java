@@ -1,13 +1,14 @@
 package idstay.frontdesk.booking;
 
 import idstay.TestConfig;
+import idstay.backoffice.config.crew.support.CrewRepository;
 import idstay.backoffice.config.hotel.Hotel;
 import idstay.backoffice.config.hotel.Room;
 import idstay.backoffice.config.hotel.RoomType;
 import idstay.backoffice.config.hotel.support.HotelRepository;
 import idstay.backoffice.config.hotel.support.RoomRepository;
 import idstay.backoffice.config.hotel.support.RoomTypeRepository;
-//import idstay.frontdesk.reservation.support.ReservationRepository;
+//import idstay.frontdesk.FacilityBooking.support.ReservationRepository;
 //import idstay.frontdesk.booking.support.RoomOccupancyRepository;
 //import idstay.profiles.hotelguest.HotelGuest;
 //import idstay.profiles.hotelguest.support.HotelGuestRepository;
@@ -21,11 +22,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.transaction.Transactional;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = TestConfig.class)
 public class BookingIntegrationTest {
+    @Autowired
+    CrewRepository crewRepository;
+
+    @Test
+    public void foo() {
+        assertThat(crewRepository, is(notNullValue()));
+    }
+
 //    @Autowired
 //    private RoomOccupancyRepository roomOccupancyRepository;
 //

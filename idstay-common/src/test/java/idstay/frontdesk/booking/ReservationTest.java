@@ -14,6 +14,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.annotation.SystemProfileValueSource;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.*;
@@ -21,15 +22,13 @@ import static org.hamcrest.CoreMatchers.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = TestConfig.class)
+@ActiveProfiles(profiles = "unittest")
 public class ReservationTest {
     @Autowired
     private ReservationRepository reservationRepository;
 
     @Autowired
     private ReservationService reservationService;
-
-    @Autowired
-    private EntityIdUtil sequencesUtil;
 
     @Autowired
     private EntitySequencesRepository entitySequencesRepository;

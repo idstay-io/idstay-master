@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 @Entity
-@Table
+@Table(name="booking")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="booking_type",
         discriminatorType=DiscriminatorType.STRING

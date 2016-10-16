@@ -36,8 +36,8 @@ public class FrontController {
 
     @RequestMapping(value="/reservation", method = {GET})
     public String reservaton() {
-        logger.info("reservation");
-        String url = "/hotel/1/reservation";
+        logger.info("FacilityBooking");
+        String url = "/hotel/1/FacilityBooking";
         return "redirect:" + url;
     }
 }
