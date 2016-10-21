@@ -11,24 +11,33 @@ public class DateTimeUtil {
     public static final String KST = "Asia/Seoul";
 
 
-    public static Date getLocalDate() {
+    public static Date getLocalDate(){
         TimeZone timeZone = TimeZone.getTimeZone(KST);
         Calendar calendar = Calendar.getInstance(timeZone);
 
         return calendar.getTime();
     }
 
-    public static String getLocalDateString() {
+    public static String getLocalDateString(){
         DateFormat df = new SimpleDateFormat("yyyy.MM.dd");
         return df.format(getLocalDate());
     }
 
-    public static Date toDate(String dateString) {
+    public static Date toDate(String dateString){
         try {
             SimpleDateFormat conv = new SimpleDateFormat("yyyy.MM.dd");
             return conv.parse(dateString);
         } catch (ParseException e) {
             throw  new RuntimeException("ParseException: " + dateString);
+        }
+    }
+
+    public static Date toDate(String dateString, String timeString){
+        try {
+            SimpleDateFormat conv = new SimpleDateFormat("yyyy.MM.dd HH:mm");
+            return conv.parse(dateString + " " + timeString);
+        } catch (ParseException e) {
+            throw  new RuntimeException("ParseException: " + dateString + " " + timeString);
         }
     }
 }

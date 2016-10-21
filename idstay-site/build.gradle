@@ -1,5 +1,5 @@
 springBoot {
-    mainClass = 'idstay.IdstayApplication'
+    mainClass = 'idstay.IdstayBootApplication'
     backupSource = false
 }
 

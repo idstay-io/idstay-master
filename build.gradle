@@ -55,4 +55,8 @@ configure(javaProjects) {
 
 configure(bootProjects) {
     apply plugin: 'spring-boot'
+
+    dependencies {
+        compile("org.springframework.boot:spring-boot-devtools")
+    }
 }

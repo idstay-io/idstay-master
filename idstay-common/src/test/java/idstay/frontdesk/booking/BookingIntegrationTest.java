@@ -8,7 +8,7 @@ import idstay.backoffice.config.hotel.RoomType;
 import idstay.backoffice.config.hotel.support.HotelRepository;
 import idstay.backoffice.config.hotel.support.RoomRepository;
 import idstay.backoffice.config.hotel.support.RoomTypeRepository;
-//import idstay.frontdesk.FacilityBooking.support.ReservationRepository;
+//import idstay.frontdesk.RestaurantBooking.support.ReservationRepository;
 //import idstay.frontdesk.booking.support.RoomOccupancyRepository;
 //import idstay.profiles.hotelguest.HotelGuest;
 //import idstay.profiles.hotelguest.support.HotelGuestRepository;

@@ -5,19 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.core.env.ConfigurableEnvironment;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.core.env.ConfigurableEnvironment;
-
 import static java.lang.String.format;
-import static org.springframework.util.StringUtils.arrayToCommaDelimitedString;
-import static idstay.IdstayProfiles.*;
 
-public class IdstaySpringApplication extends SpringApplication {
-    private static final Logger logger = LoggerFactory.getLogger(IdstaySpringApplication.class);
-    public IdstaySpringApplication(Class<?> configClass) {
+public class IdstayBootApplication extends SpringApplication {
+    private static final Logger logger = LoggerFactory.getLogger(IdstayBootApplication.class);
+    public IdstayBootApplication(Class<?> configClass) {
         super(configClass);
     }
 

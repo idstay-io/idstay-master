@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS idstay;
 USE idstay;
 
 -- -----------------------------------------------------
--- DROP ALL Table --------------------------------------
+-- DROP ALL RestaurantTable --------------------------------------
 -- -----------------------------------------------------
 
 DROP TABLE IF EXISTS crew;

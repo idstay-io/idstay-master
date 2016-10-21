@@ -16,7 +16,7 @@ CREATE TABLE `hotel` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `hotel`
+-- Dumping data for restaurantTable `hotel`
 --
 
 LOCK TABLES `hotel` WRITE;
@@ -35,7 +35,7 @@ CREATE TABLE `room_type` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `room_type`
+-- Dumping data for restaurantTable `room_type`
 --
 
 LOCK TABLES `room_type` WRITE;
@@ -58,7 +58,7 @@ CREATE TABLE `room` (
 ) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `room`
+-- Dumping data for restaurantTable `room`
 --
 
 LOCK TABLES `room` WRITE;
@@ -79,7 +79,7 @@ CREATE TABLE `crew` (
 ) ENGINE=InnoDB AUTO_INCREMENT=301 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `crew`
+-- Dumping data for restaurantTable `crew`
 --
 
 LOCK TABLES `crew` WRITE;
@@ -110,7 +110,7 @@ CREATE TABLE `housekeeping` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1005 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `housekeeping`
+-- Dumping data for restaurantTable `housekeeping`
 --
 
 LOCK TABLES `housekeeping` WRITE;
@@ -129,7 +129,7 @@ CREATE TABLE `housekeeping_remarks` (
 
 
 --
--- Dumping data for table `housekeeping_remarks`
+-- Dumping data for restaurantTable `housekeeping_remarks`
 --
 
 LOCK TABLES `housekeeping_remarks` WRITE;

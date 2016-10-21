@@ -1,10 +1,16 @@
 afterEvaluate {
     dependencyManagement {
         imports {
-            mavenBom('io.spring.platform:platform-bom:2.0.8.RELEASE')
+            mavenBom("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
         }
     }
 }
+
+//buildscript {
+//    dependencies {
+//        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+//    }
+//}
 
 dependencies {
     compile 'org.springframework:spring-context'

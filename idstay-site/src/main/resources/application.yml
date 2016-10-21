@@ -10,11 +10,53 @@ spring:
     mode: LEGACYHTML5
 
 ---
+spring.profiles: production
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/idstay?useSSL=false&requireSSL=false
+    username: idstay_db_user
+    password: _p@$sw0rd_0F_Db_User_
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+server:
+  port: 8080
+
+flyway:
+  enabled: false
+
+---
+spring.profiles: staging
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/idstay_staging?useSSL=false&requireSSL=false
+    username: idstay_db_user
+    password: _p@$sw0rd_0F_Db_User_
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+server:
+  port: 8080
+
+flyway:
+  enabled: false
+
+---
 spring.profiles: development
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/idstay_development
+    url: jdbc:mysql://localhost:3306/idstay_development?useSSL=false&requireSSL=false
     username: standalone_user
     password: p@ssword
     driver-class-name: com.mysql.jdbc.Driver
@@ -22,7 +64,7 @@ spring:
     database: MYSQL
     show-sql: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
 
 server:
   port: 8090
