@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[[${sesson.locale}]]">
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,7 +41,7 @@
     </div>
 </nav>
 
-<form action="#" th:action="@{'/1/facility/' + ${booking.facilityId} + '/booking'}" th:object="${booking}" method="post">
+<form action="#" th:action="@{'/restaurant/1/bookings'}" th:object="${booking}" method="post">
     <div class="container">
         <br />
         booking date (2016.01.10):
