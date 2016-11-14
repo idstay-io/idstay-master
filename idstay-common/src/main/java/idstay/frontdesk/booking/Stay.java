@@ -1,10 +1,15 @@
 package idstay.frontdesk.booking;
 
+import idstay.frontdesk.booking.id.StayId;
+import idstay.frontdesk.booking.request.StayInfo;
+import idstay.frontdesk.booking.support.InValidBookingException;
 import org.apache.commons.lang3.Validate;
 import org.springframework.core.annotation.Order;
+import org.springframework.expression.ParseException;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -14,72 +19,80 @@ import java.util.List;
 @Entity
 @Table(name="stay")
 public class Stay {
+    @EmbeddedId
+    private StayId stayId;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "stay_id")
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "booking_id", insertable = false, updatable = false)
-    @OrderColumn(name = "seq")
-    private Booking booking;
+    private Long roomId;
 
     @Embedded
     private StayPeriod stayPeriod;
+    private int adults;
+    private int kids;
+    private String guestName;
 
+    @OneToOne(mappedBy = "stay")
+    private Booking booking;
 
-
-
-
-//    @OneToMany
-//    @JoinColumn(name = "stay_id")
-//    private List<StayLine> stayLines = new ArrayList<StayLine>();
-
-
-
-
-
-
-
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "stay_id")
-//    @OrderColumn(name="stay_idx")
-    private List<StayLine> stayLines = new ArrayList<StayLine>();
-//
-//    private Long hotelGuestProfileId;
-//
     protected Stay() {}
-    public Stay(final StayInfo stayInfo, final Long roomId) {
-        Validate.notNull(stayInfo, "stayInfo is required");
-        Validate.notNull(roomId, "roomId is required");
+    public Stay(final StayId stayId, final Long roomId, final int checkin, final int checkout, final int adults, final int kids, final String guestName) throws ParseException, InValidBookingException, java.text.ParseException {
+        Validate.notNull(stayId, "stayId  is required");
+        Validate.notNull(roomId, "roomId  is required");
+        Validate.notNull(checkin, "checkin  is required");
+        Validate.notNull(checkout, "checkout is required");
+        Validate.notNull(adults, "adults in is required");
+        Validate.notNull(kids, "kids in is required");
+        Validate.notNull(guestName, "guestName in is required");
 
-        this.stayLines.add(new StayLine(stayInfo.getStayPeriod(), roomId));
-
-
+        this.stayId = stayId;
+        this.roomId = roomId;
+        this.stayPeriod = new StayPeriod(checkin, checkout);
+        this.adults = adults;
+        this.kids = kids;
+        this.guestName = guestName;
     }
 
-//
-//
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public StayInfo getStayInfo() {
-//        return stayInfo;
-//    }
-//
-//    public Long getHotelGuestProfileId() {
-//        return hotelGuestProfileId;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "Stay{" +
-//                "id=" + id +
-//                ", stayInfo=" + stayInfo +
-//                ", hotelGuestProfileId=" + hotelGuestProfileId +
-//                '}';
-//    }
+    public StayId getStayId() {
+        return stayId;
+    }
+
+    public Long getRoomId() {
+        return roomId;
+    }
+
+    public StayPeriod getStayPeriod() {
+        return stayPeriod;
+    }
+
+    public int getAdults() {
+        return adults;
+    }
+
+    public int getKids() {
+        return kids;
+    }
+
+    public String getGuestName() {
+        return guestName;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    @Override
+    public String toString() {
+        return "Stay{" +
+                "id=" + stayId +
+                ", roomId=" + roomId +
+                ", stayPeriod=" + stayPeriod +
+                ", adults=" + adults +
+                ", kids=" + kids +
+                ", guestName='" + guestName + '\'' +
+                ", booking=" + booking +
+                '}';
+    }
+
+    public static Stay fromRequest(String s, StayInfo stayInfo) {
+
+    }
 }

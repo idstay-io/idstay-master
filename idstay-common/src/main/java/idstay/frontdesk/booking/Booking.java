@@ -1,10 +1,9 @@
 package idstay.frontdesk.booking;
 
-import org.apache.commons.lang3.Validate;
+import idstay.frontdesk.booking.id.BookingId;
+import idstay.frontdesk.booking.request.GuestInfo;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by minsoo.kim@jkglobe.com on 16. 10. 7.
@@ -12,55 +11,40 @@ import java.util.List;
 
 @Entity
 @Table(name="booking")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="booking_type",
-        discriminatorType=DiscriminatorType.STRING
-)
-public abstract class Booking {
+public class Booking {
     @EmbeddedId
     private BookingId bookingId;
+    protected Booking() {}
 
     @Embedded
-    private StayInfo stayInfo;
+    private GuestInfo guestInfo = new GuestInfo();
 
-    private Long roomId;
-    private Long guestProfileId;
+    @OneToOne
+    @JoinColumn(name = "stay_id")
+    private Stay stay;
 
-//    @Enumerated(EnumType.STRING)
-//    @Column(name = "booking_type")
-//    private BookingType bookingType;
-
-//    @OneToMany(orphanRemoval = true)
-//    @JoinColumn(name = "booking_id")
-//    private List<Stay> stays = new ArrayList<Stay>();
-
-    protected Booking() {}
-    public Booking(final BookingId bookingId, final StayInfo stayInfo, final Long roomId) {
-        Validate.notNull(bookingId, "bookingId in is required");
-        Validate.notNull(stayInfo, "stayInfo in is required");
-        Validate.notNull(roomId, "roomId in is required");
+    public Booking(final BookingId bookingId, final Stay stay) {
         this.bookingId = bookingId;
-        this.stayInfo = stayInfo;
-        this.roomId = roomId;
+        this.stay = stay;
     }
 
-    @Transient
-    public BookingType getBookingType() {
-        String bookingType = this.getClass().getAnnotation(DiscriminatorValue.class).value();
-        return BookingType.valueOf(bookingType);
+    public GuestInfo getGuestInfo() {
+        return guestInfo;
     }
 
-    public BookingId getBookingId() {
-        return bookingId;
+    public Stay getStay() {
+        return stay;
+    }
+    public void setStay(Stay stay) {
+        this.stay = stay;
     }
 
     @Override
     public String toString() {
         return "Booking{" +
                 "bookingId=" + bookingId +
-                ", stayInfo=" + stayInfo +
-                ", roomId=" + roomId +
-                ", guestProfileId=" + guestProfileId +
+                ", guestInfo=" + guestInfo +
+                ", stay=" + stay +
                 '}';
     }
 }

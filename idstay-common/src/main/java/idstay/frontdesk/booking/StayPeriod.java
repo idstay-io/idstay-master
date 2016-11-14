@@ -11,27 +11,37 @@ import org.apache.commons.lang3.*;
 
 @Embeddable
 public class StayPeriod {
-    @Temporal(TemporalType.DATE)
-    private Date fromDate;
-    @Temporal(TemporalType.DATE)
-    private Date toDate;
+    private int checkin;
+    private int checkout;
 
-    protected StayPeriod() {
+    protected StayPeriod() {}
+
+    public StayPeriod(final int checkin, final int checkout){
+        this.checkin = checkin;
+        this.checkout = checkout;
     }
 
-    public StayPeriod(final String fromDate, final String toDate) throws ParseException {
-        Validate.notNull(fromDate, "fromDate in is required");
-        Validate.notNull(toDate, "toDate out is required");
+    public int getCheckin() {
+        return checkin;
+    }
 
-        this.fromDate = DateTimeUtil.toDate(fromDate);
-        this.toDate = DateTimeUtil.toDate(toDate);
+    public void setCheckin(int checkin) {
+        this.checkin = checkin;
+    }
+
+    public int getCheckout() {
+        return checkout;
+    }
+
+    public void setCheckout(int checkout) {
+        this.checkout = checkout;
     }
 
     @Override
     public String toString() {
         return "StayPeriod{" +
-                "fromDate=" + fromDate +
-                ", toDate=" + toDate +
+                "checkin=" + checkin +
+                ", checkout=" + checkout +
                 '}';
     }
 }

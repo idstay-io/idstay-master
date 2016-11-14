@@ -1,9 +1,9 @@
 package idstay.housekeeping;
 
-import idstay.housekeeping.common.CleaningStatus;
-import idstay.housekeeping.common.Remarks;
-import idstay.housekeeping.common.ReservationStatus;
-import idstay.housekeeping.common.RoomStatus;
+import idstay.housekeeping.shared.CleaningStatus;
+import idstay.housekeeping.shared.Remarks;
+import idstay.housekeeping.shared.ReservationStatus;
+import idstay.housekeeping.shared.RoomStatus;
 import idstay.backoffice.config.hotel.Room;
 import idstay.backoffice.config.hotel.RoomType;
 import org.apache.commons.lang3.builder.ToStringBuilder;

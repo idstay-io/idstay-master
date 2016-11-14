@@ -1,10 +1,7 @@
 package idstay.facilities.restaurant;
 
-import idstay.common.util.DateTimeUtil;
 import idstay.facilities.booking.shared.RestaurantTable;
 import idstay.facilities.restaurant.dto.BookingForm;
-import idstay.housekeeping.common.Remarks;
-import idstay.housekeeping.dto.HousekeepingDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

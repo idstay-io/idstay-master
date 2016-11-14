@@ -17,7 +17,7 @@ public class StayTest {
 //    private StayRepository stayRepository;
 //
 //    @Autowired
-//    private HotelGuestProfileRepository hotelGuestProfileRepository;
+//    private GuestProfileRepository hotelGuestProfileRepository;
 //
 //
 //    @Test
@@ -29,8 +29,8 @@ public class StayTest {
 //
 //        Stay savedStay = stayRepository.save(stay);
 //
-//        HotelGuestProfile profile = new HotelGuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
-//        HotelGuestProfile savedProfile = hotelGuestProfileRepository.save(profile);
+//        GuestProfile profile = new GuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
+//        GuestProfile savedProfile = hotelGuestProfileRepository.save(profile);
 //
 //        savedStay.setHotelGuestProfile(savedProfile);
 //

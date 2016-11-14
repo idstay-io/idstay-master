@@ -1,6 +1,5 @@
 package idstay;
 
-import idstay.housekeeping.HousekeepingController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -14,6 +13,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @Controller
 public class FrontController {
     private static final Logger logger = LoggerFactory.getLogger(FrontController.class);
+
+    private static final String URL_OTA_INVOICE = "/1/ota_invoice";
+
 
     @RequestMapping(value="/", method = {GET})
     public String index() {
@@ -36,10 +38,20 @@ public class FrontController {
 
     @RequestMapping(value="/reservation", method = {GET})
     public String reservaton() {
-        logger.info("RestaurantBooking");
-        String url = "/hotel/1/RestaurantBooking";
-        return "redirect:" + url;
+        logger.info("ota_invoice");
+
+
+
+
+        return "redirect:" + URL_OTA_INVOICE;
     }
+
+
+
+
+
+
+
 
     @RequestMapping(value="/thecommon", method = {GET})
     public String thecommon() {

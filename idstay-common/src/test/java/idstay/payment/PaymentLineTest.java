@@ -27,7 +27,7 @@ public class PaymentLineTest  {
 //    PaymentLineRepository repository;
 //
 //    @Autowired
-//    HotelGuestProfileRepository profileRepository;
+//    GuestProfileRepository profileRepository;
 //
 //    @Autowired
 //    PaymentLineRepository paymentLineRepository;
@@ -51,7 +51,7 @@ public class PaymentLineTest  {
 //
 //        pay1 = paymentLineRepository.save(pay1);
 //
-//        HotelGuestProfile profile = new HotelGuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
+//        GuestProfile profile = new GuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
 //        profile = profileRepository.save(profile);
 //
 //        Stay stay = new Stay(new StayPeriod("2016.01.01", "2016.01.17"));
@@ -78,7 +78,7 @@ public class PaymentLineTest  {
 ////
 ////
 ////
-////        HotelGuestProfile profile = new HotelGuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
+////        GuestProfile profile = new GuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
 ////        profile = profileRepository.save(profile);
 ////
 ////        HotelGuestUse hotelGuestUse = new HotelGuestUse(DateTimeUtil.getLocalDate(), profile);

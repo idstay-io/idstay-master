@@ -1,15 +1,15 @@
 package idstay.housekeeping;
 
 import idstay.common.util.DateTimeUtil;
-import idstay.housekeeping.common.CleaningStatus;
-import idstay.housekeeping.common.Remarks;
-import idstay.housekeeping.common.ReservationStatus;
-import idstay.housekeeping.common.RoomStatus;
+import idstay.housekeeping.shared.CleaningStatus;
+import idstay.housekeeping.shared.Remarks;
+import idstay.housekeeping.shared.ReservationStatus;
+import idstay.housekeeping.shared.RoomStatus;
 import idstay.housekeeping.dto.HousekeepingDto;
 import idstay.housekeeping.support.HousekeepingNotFoundException;
 import idstay.backoffice.config.crew.Crew;
 import idstay.backoffice.config.crew.CrewService;
-import idstay.hotelconfig.dto.crew.CrewDto;
+import idstay.backoffice.config.crew.CrewDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,18 +29,22 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 public class HousekeepingController {
     private static final Logger logger = LoggerFactory.getLogger(HousekeepingController.class);
+
+    private static String TEMPLATE_HOUSEKEEPING_LIST = "housekeeping/list";
+    private static String TEMPLATE_HOUSEKEEPING_EDIT = "housekeeping/edit";
+
     private HousekeepingService housekeepingService;
     private CrewService crewService;
-
 
 
     @RequestMapping(value="/hotel/{hotelId}/housekeepings/{crew}", method = GET)
     public String getHousekeepings(@PathVariable("hotelId") Long hotelId,
                                    @PathVariable("crew") String crewName,
                                    Model model) {
+
         model.addAttribute("crew", crewName);
         model.addAttribute("housekeepings", getHousekeepingDtoList(hotelId));
-        return "housekeeping/list";
+        return TEMPLATE_HOUSEKEEPING_LIST;
     }
 
     @RequestMapping(value="/hotel/{hotelId}/housekeeping/{housekeepingId}/{crew}", method = GET)
@@ -49,12 +53,12 @@ public class HousekeepingController {
             @PathVariable("housekeepingId") Long housekeepingId,
             @PathVariable("crew") String crewName,
             Model model) {
+
         logger.info("editHousekeeping: {}, {}",  housekeepingId.toString(), crewName);
 
         model.addAttribute("crew", crewName);
         model.addAttribute("housekeeping", getHousekeepingDto(housekeepingId));
-        //model.addAttribute("history", getHousekeepingHistoryDto(housekeepingId));
-        return "housekeeping/edit";
+        return TEMPLATE_HOUSEKEEPING_EDIT;
     }
 
 
@@ -73,21 +77,28 @@ public class HousekeepingController {
         return housekeepings;
     }
 
-    private Housekeeping getHousekeeping(Long housekeepingId) {
-        Housekeeping housekeeping = housekeepingService.findById(housekeepingId);
-        if(housekeeping == null) {
-            logger.error("housekeeping find by housekeepingId Error: {}", housekeepingId);
-            throw new HousekeepingNotFoundException("housekeeping find by housekeepingId Error: " + housekeepingId);
-        }
-        return housekeeping;
+
+
+
+
+    @RequestMapping(value="/hotel/{hotelId}/housekeeping/{housekeepingId}/{crew}", method = POST)
+    public String saveHousekeeping(
+            @PathVariable("hotelId") Long hotelId,
+            @PathVariable("housekeepingId") Long housekeepingId,
+            @ModelAttribute HousekeepingDto dto,
+            @PathVariable("crew") String crewName,
+            BindingResult result,
+            Model model) {
+
+        logger.info("saveHousekeeping: {}, {}",  dto.toString(), crewName);
+        housekeepingService.save(toHousekeeping(dto), getCrew(crewName));
+        String url = "/hotel/1/housekeepings/" + crewName;
+        return "redirect:" + url;
     }
 
-    private HousekeepingDto getHousekeepingDto(Long housekeepingId) {
-        return HousekeepingDto.toDto(getHousekeeping(housekeepingId));
-    }
 
 
-    private Housekeeping getHousekeeping(final HousekeepingDto dto) {
+    private Housekeeping toHousekeeping(final HousekeepingDto dto) {
         Housekeeping housekeeping = housekeepingService.findById(dto.getHousekeepingId());
 
         if(housekeeping == null) {
@@ -103,20 +114,19 @@ public class HousekeepingController {
                 .memo(dto.getMemo());
     }
 
-    @RequestMapping(value="/hotel/{hotelId}/housekeeping/{housekeepingId}/{crew}", method = POST)
-    public String saveHousekeeping(
-            @PathVariable("hotelId") Long hotelId,
-            @PathVariable("housekeepingId") Long housekeepingId,
-            @ModelAttribute HousekeepingDto dto,
-            @PathVariable("crew") String crewName,
-            BindingResult result,
-            Model model) {
-
-        logger.info("saveHousekeeping: {}, {}",  dto.toString(), crewName);
-        housekeepingService.save(getHousekeeping(dto), getCrew(crewName));
-        String url = "/hotel/1/housekeepings/" + crewName;
-        return "redirect:" + url;
+    private HousekeepingDto getHousekeepingDto(Long housekeepingId) {
+        return HousekeepingDto.toDto(getHousekeeping(housekeepingId));
     }
+
+    private Housekeeping getHousekeeping(Long housekeepingId) {
+        Housekeeping housekeeping = housekeepingService.findById(housekeepingId);
+        if(housekeeping == null) {
+            logger.error("housekeeping find by housekeepingId Error: {}", housekeepingId);
+            throw new HousekeepingNotFoundException("housekeeping find by housekeepingId Error: " + housekeepingId);
+        }
+        return housekeeping;
+    }
+
 
     private Crew getCrew(String crewName) {
         return crewService.findByCrewName(crewName);

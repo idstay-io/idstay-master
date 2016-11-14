@@ -1,13 +1,13 @@
 package idstay.housekeeping.dto;
 
 import idstay.housekeeping.Housekeeping;
-import idstay.housekeeping.common.CleaningStatus;
-import idstay.housekeeping.common.Remarks;
-import idstay.housekeeping.common.ReservationStatus;
-import idstay.housekeeping.common.RoomStatus;
-import idstay.hotelconfig.dto.hotel.RoomDto;
-import idstay.hotelconfig.dto.hotel.RoomTypeDto;
-import idstay.hotelconfig.dto.crew.CrewDto;
+import idstay.housekeeping.shared.CleaningStatus;
+import idstay.housekeeping.shared.Remarks;
+import idstay.housekeeping.shared.ReservationStatus;
+import idstay.housekeeping.shared.RoomStatus;
+import idstay.backoffice.config.hotel.RoomDto;
+import idstay.backoffice.config.hotel.RoomTypeDto;
+import idstay.backoffice.config.crew.CrewDto;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 

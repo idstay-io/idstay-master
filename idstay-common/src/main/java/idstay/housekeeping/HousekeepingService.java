@@ -1,9 +1,9 @@
 package idstay.housekeeping;
 
 import idstay.common.util.DateTimeUtil;
-import idstay.housekeeping.common.CleaningStatus;
-import idstay.housekeeping.common.ReservationStatus;
-import idstay.housekeeping.common.RoomStatus;
+import idstay.housekeeping.shared.CleaningStatus;
+import idstay.housekeeping.shared.ReservationStatus;
+import idstay.housekeeping.shared.RoomStatus;
 import idstay.housekeeping.support.HousekeepingRepository;
 import idstay.backoffice.config.hotel.HotelService;
 import idstay.backoffice.config.crew.Crew;

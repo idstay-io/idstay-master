@@ -5,16 +5,10 @@ package idstay.frontdesk.booking; /**
 
 import idstay.IdstaySite;
 
-import idstay.profiles.hotelguest.HotelGuestProfile;
-import idstay.profiles.hotelguest.support.HotelGuestProfileRepository;
-import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.text.ParseException;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -29,7 +23,7 @@ public class StayServiceTest {
 //    private StayService stayService;
 
 //    @Autowired
-//    private HotelGuestProfileRepository profileRepository;
+//    private GuestProfileRepository profileRepository;
 //
 //    @Autowired
 //    private HotelGuestSpendingRepository hotelGuestSpendingRepository;
@@ -43,7 +37,7 @@ public class StayServiceTest {
 //    public void foo() throws ParseException {
 //        assertThat(stayService, is(notNullValue()));
 //        StayPeriod period = new StayPeriod("2016.01.01", "2016.01.02");
-//        HotelGuestProfile profile = new HotelGuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
+//        GuestProfile profile = new GuestProfile("minsoo.kim@jkglobe.com", "KIM minsoo");
 //
 //        profile = profileRepository.save(profile);
 //

@@ -1,23 +1,9 @@
 package idstay.frontdesk.booking;
 
-import idstay.backoffice.config.hotel.Room;
 //import idstay.profiles.hotelguest.HotelGuest;
-import idstay.profiles.hotelguest.HotelGuestProfileService;
-import idstay.testutils.RoomBuilder;
-import org.junit.Before;
-import org.junit.Test;
 
 import org.junit.runner.RunWith;
-import org.mockito.*;
-import org.mockito.runners.MockitoJUnitRunner;
-
-import java.util.Optional;
-
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import static org.mockito.Matchers.*;
-import static org.mockito.BDDMockito.*;
-
+        import org.mockito.runners.MockitoJUnitRunner;
 
 
 @RunWith(MockitoJUnitRunner.class)

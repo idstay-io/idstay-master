@@ -1,6 +1,6 @@
 package idstay.housekeeping;
 
-import idstay.housekeeping.common.Remarks;
+import idstay.housekeeping.shared.Remarks;
 import idstay.backoffice.config.crew.Crew;
 
 import javax.persistence.*;
